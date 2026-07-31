@@ -62,13 +62,7 @@
 ### ⚙️ Tools & Technologies
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,git,github,vscode,npm" alt="Tools & Technologies" />
-</p>
-
-<p align="center">
-  <img src="linux.svg" width="45" alt="Linux" />
-  &nbsp;&nbsp;
-  <img src="supabase-icon.svg" width="45" alt="Supabase" />
+  <img src="https://skillicons.dev/icons?i=nodejs,git,github,vscode,npm,linux,supabase" alt="Tools & Technologies" />
 </p>
 
 ---
