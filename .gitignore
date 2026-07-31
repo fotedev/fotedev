@@ -36,5 +36,3 @@ _tools/
 
 # SVGs not currently used in the README (kept locally for future use)
 drizzle-orm.svg
-linux.svg
-supabase-icon.svg
