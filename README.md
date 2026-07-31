@@ -14,7 +14,7 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00D9FF&center=true&vCenter=true&width=435&lines=Frontend+Developer;Web+Development+Enthusiast;Always+Learning+New+Technologies" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=22D3EE&center=true&vCenter=true&width=500&lines=AI+Engineering+Student;Web+Developer;Building+Masar+X;Always+Learning" alt="Typing SVG" />
 </div>
 
 <p align="center">
@@ -25,13 +25,10 @@
 
 ## 🎓 About Me
 
-🎯 **Frontend Developer** passionate about creating engaging web experiences
-
-💾 **Learned Supabase Integration** through building a comprehensive learning platform (Masar X) - mastering database operations, authentication, file storage, and real-time features
-
-🌟 Currently exploring the fascinating world of web development and AI
-
-💡 Always eager to learn new technologies and improve my skills
+🧠 **AI Engineering Student** @ Assiut University — Faculty of Computers & AI
+💻 Building web products with **Next.js, Supabase & AI integrations**
+🛠️ Currently building **Masar X**, an AI-powered study platform
+🚀 Documenting my learning journey in public
 
 ---
 

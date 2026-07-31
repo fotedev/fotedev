@@ -340,7 +340,7 @@
         <g transform="translate(0,57.5)" opacity="0">
           <animate attributeName="opacity" begin="0.53s" dur="0.4s" from="0" to="1" fill="freeze"/>
           <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#3B82F6" font-weight="700">Role</tspan><tspan fill="#7C8CA6">:</tspan><tspan fill="#3A4558"> ... </tspan><tspan fill="#F1F5F9">Frontend Developer · Building Masar X</tspan>
+            <tspan fill="#3B82F6" font-weight="700">Role</tspan><tspan fill="#7C8CA6">:</tspan><tspan fill="#3A4558"> ... </tspan><tspan fill="#F1F5F9">AI Engineering Student · Building Masar X</tspan>
           </text>
         </g>
         <g transform="translate(0,82.5)" opacity="0">
@@ -358,7 +358,7 @@
         <g transform="translate(0,132.5)" opacity="0">
           <animate attributeName="opacity" begin="0.92s" dur="0.4s" from="0" to="1" fill="freeze"/>
           <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#3B82F6" font-weight="700">Status</tspan><tspan fill="#7C8CA6">:</tspan><tspan fill="#3A4558"> ... </tspan><tspan fill="#F1F5F9">Building • Learning • Frontend Enthusiast</tspan>
+            <tspan fill="#3B82F6" font-weight="700">Status</tspan><tspan fill="#7C8CA6">:</tspan><tspan fill="#3A4558"> ... </tspan><tspan fill="#F1F5F9">Building • Learning • Shipping in Public</tspan>
           </text>
         </g>
         <g transform="translate(0,157.5)" opacity="0">
