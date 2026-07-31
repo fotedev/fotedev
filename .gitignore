@@ -27,7 +27,6 @@ venv/
 .env.local
 
 # Reference / scratch / build tools - not for publish
-shaikhtaha258-maker-main/
 context.txt
 context_1.txt
 context_2.txt
