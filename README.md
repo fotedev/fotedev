@@ -65,28 +65,11 @@
   <img src="https://skillicons.dev/icons?i=nodejs,git,github,vscode,npm" alt="Tools & Technologies" />
 </p>
 
-### 🌐 Platforms & Backend
-
-<table align="center">
-  <tr>
-    <td align="center" width="50%">
-      <img src="linux.svg" width="120" alt="Linux" />
-      <br />
-      <br />
-      <strong>🐧 Linux</strong>
-      <br />
-      <sub>Daily Linux user & system scripting</sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="supabase-icon.svg" width="60" alt="Supabase" />
-      <br />
-      <br />
-      <strong>🟢 Supabase</strong>
-      <br />
-      <sub>Backend & Database management</sub>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="linux.svg" width="45" alt="Linux" />
+  &nbsp;&nbsp;
+  <img src="supabase-icon.svg" width="45" alt="Supabase" />
+</p>
 
 ---
 
