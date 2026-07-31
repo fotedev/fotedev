@@ -1,0 +1,41 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.local
+
+# Reference / scratch / build tools - not for publish
+shaikhtaha258-maker-main/
+context.txt
+context_1.txt
+context_2.txt
+temp-prompt.txt
+preview/
+_tools/
+
+# SVGs not currently used in the README (kept locally for future use)
+drizzle-orm.svg
+linux.svg
+supabase-icon.svg
