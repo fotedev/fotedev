@@ -1,440 +1,1075 @@
-<svg width="1400" height="800" viewBox="0 0 1400 800" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#F1F5F9"/>
-    </linearGradient>
 
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2563EB"/>
-      <stop offset="50%" stop-color="#06B6D4"/>
-      <stop offset="100%" stop-color="#10B981"/>
-      <animate attributeName="x1" values="0%;100%;0%" dur="8s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="100%;200%;100%" dur="8s" repeatCount="indefinite"/>
-    </linearGradient>
+<svg width="800" height="1156" viewBox="0 0 800 1156" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Fira+Code:wght@300..700&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Outfit:wght@100..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap');
 
-    <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2563EB"/>
-      <stop offset="100%" stop-color="#0EA5E9"/>
-      <animate attributeName="x1" values="0%;100%;0%" dur="7s" repeatCount="indefinite"/>
-    </linearGradient>
+    * {
+      box-sizing: border-box;
+    }
 
-    <linearGradient id="borderShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="rgba(15,23,42,.10)" stop-opacity="0"/>
-      <stop offset="45%" stop-color="#2563EB" stop-opacity="0.9"/>
-      <stop offset="55%" stop-color="#06B6D4" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="rgba(15,23,42,.10)" stop-opacity="0"/>
-      <animate attributeName="x1" values="-100%;150%" dur="5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0%;250%" dur="5s" repeatCount="indefinite"/>
-    </linearGradient>
+    text {
+      user-select: none;
+    }
 
-    <radialGradient id="glowA" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glowB" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
-    </radialGradient>
+    .gitascii-canvas-bg {
+      fill: #0d1117;
+      transition: fill 0.3s ease;
+    }
 
-    <clipPath id="mapClip">
-      <rect x="62" y="174" width="590" height="564" rx="8"/>
-    </clipPath>
+    @media (prefers-color-scheme: light) {
+      .gitascii-canvas-bg {
+        fill: #ffffff !important;
+      }
+    }
 
-    <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.02 0"/>
-    </filter>
+    @media (prefers-color-scheme: dark) {
+      .gitascii-canvas-bg {
+        fill: #0d1117 !important;
+      }
+    }
+  </style>
 
-    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
-
-  <rect x="0" y="0" width="1400" height="800" fill="url(#bgGrad)"/>
-  <rect x="0" y="0" width="1400" height="800" filter="url(#noise)"/>
-
-  <circle cx="150" cy="120" r="240" fill="url(#glowA)">
-    <animateTransform attributeName="transform" type="translate" values="0,0;30,20;0,0" dur="12s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="1250" cy="680" r="280" fill="url(#glowB)">
-    <animateTransform attributeName="transform" type="translate" values="0,0;-25,-15;0,0" dur="14s" repeatCount="indefinite"/>
-  </circle>
+  <rect class="gitascii-canvas-bg" width="800" height="1156" fill="#ffffff" rx="8" />
 
   
-      <circle cx="795.6" cy="500.5" r="2.1" fill="#06B6D4" opacity="0.32">
-        <animate attributeName="cy" values="500.5;469.2;500.5" dur="7.4s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.32;0" dur="7.4s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="1256.0" cy="161.7" r="1.9" fill="#06B6D4" opacity="0.34">
-        <animate attributeName="cy" values="161.7;134.2;161.7" dur="9.1s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.34;0" dur="9.1s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="738.4" cy="358.4" r="2.3" fill="#06B6D4" opacity="0.19">
-        <animate attributeName="cy" values="358.4;335.9;358.4" dur="9.2s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.19;0" dur="9.2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="694.7" cy="60.0" r="1.9" fill="#06B6D4" opacity="0.31">
-        <animate attributeName="cy" values="60.0;34.3;60.0" dur="9.7s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.31;0" dur="9.7s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="1282.1" cy="442.3" r="2.0" fill="#06B6D4" opacity="0.35">
-        <animate attributeName="cy" values="442.3;425.9;442.3" dur="6.6s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.35;0" dur="6.6s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="406.8" cy="182.2" r="2.3" fill="#06B6D4" opacity="0.19">
-        <animate attributeName="cy" values="182.2;164.1;182.2" dur="9.7s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.19;0" dur="9.7s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="350.0" cy="227.3" r="1.0" fill="#06B6D4" opacity="0.21">
-        <animate attributeName="cy" values="227.3;204.6;227.3" dur="8.6s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.21;0" dur="8.6s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="272.2" cy="103.7" r="1.0" fill="#06B6D4" opacity="0.25">
-        <animate attributeName="cy" values="103.7;70.0;103.7" dur="10.4s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.25;0" dur="10.4s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="188.4" cy="133.2" r="1.2" fill="#06B6D4" opacity="0.18">
-        <animate attributeName="cy" values="133.2;116.8;133.2" dur="7.6s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.18;0" dur="7.6s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="295.9" cy="166.6" r="1.9" fill="#06B6D4" opacity="0.20">
-        <animate attributeName="cy" values="166.6;139.7;166.6" dur="8.3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.20;0" dur="8.3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="753.1" cy="616.7" r="1.4" fill="#06B6D4" opacity="0.21">
-        <animate attributeName="cy" values="616.7;589.7;616.7" dur="6.4s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.21;0" dur="6.4s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="1081.5" cy="104.4" r="2.2" fill="#06B6D4" opacity="0.22">
-        <animate attributeName="cy" values="104.4;75.8;104.4" dur="6.1s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.22;0" dur="6.1s" repeatCount="indefinite"/>
-      </circle>
+    <g transform="translate(0, 0)" id="widget-widget_fote_banner_art">
 
-  <!-- title line -->
-  <text x="40" y="52" font-family="'JetBrains Mono',monospace" font-size="26" font-weight="700" fill="#0F172A">FOTE<tspan fill="#64748B" font-weight="400">/README</tspan><tspan fill="#06B6D4">.md</tspan></text>
-
-  <!-- main window -->
-  <rect x="40" y="96" width="1320" height="668" rx="16" fill="#F8FAFC" fill-opacity="0.6" stroke="rgba(15,23,42,.10)" stroke-width="1"/>
-  <rect x="40" y="96" width="1320" height="668" rx="16" fill="none" stroke="url(#borderShimmer)" stroke-width="1.3"/>
-
-  <!-- title bar -->
-  <line x1="40" y1="148" x2="1360" y2="148" stroke="rgba(15,23,42,.10)" stroke-width="1"/>
-  <circle cx="70" cy="122.0" r="7" fill="#FF5F57"/>
-  <circle cx="94" cy="122.0" r="7" fill="#FEBC2E"/>
-  <circle cx="118" cy="122.0" r="7" fill="#28C840"/>
-  <text x="700.0" y="127.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="14.5" fill="#64748B">fotedev@github ~ % ./profile.sh --live</text>
-  <g>
-    <circle cx="1242" cy="122.0" r="4" fill="#F87171">
-      <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="1254" y="126.0" font-family="'JetBrains Mono',monospace" font-size="12" letter-spacing="1.5" fill="#F87171">SCANNING</text>
-  </g>
-
-  <!-- VISUAL.MAP panel -->
-  <rect x="62" y="174" width="590" height="564" rx="8" fill="none" stroke="rgba(15,23,42,.10)" stroke-width="1"/>
-  <text x="62" y="164" font-family="'JetBrains Mono',monospace" font-size="12.5" letter-spacing="2" fill="#64748B">DEV.AVATAR</text>
-  <g clip-path="url(#mapClip)">
-    <g transform="translate(76,182)">
-      <animateTransform attributeName="transform" type="translate" values="76,182;76,176;76,182" dur="6s" repeatCount="indefinite"/>
       
-      <text x="0" y="7.4" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                                                                                        
-        <animate attributeName="opacity" begin="0.50s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="17.1" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                                                                                        
-        <animate attributeName="opacity" begin="0.55s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="26.8" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                                                                                        
-        <animate attributeName="opacity" begin="0.59s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="36.5" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                           **:*:  . .    +---                                           
-        <animate attributeName="opacity" begin="0.64s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="46.2" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                       =-.:               . ..--                                        
-        <animate attributeName="opacity" begin="0.68s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="56.0" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                      -=*-   :  .. : . :::    :.-==                                     
-        <animate attributeName="opacity" begin="0.72s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="65.7" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                   /               --+* :  .  .      :    :.   .:.=*                                    
-        <animate attributeName="opacity" begin="0.77s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="75.4" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                   &lt;              *+:+  .      .  .  ..    .    :=.-+                            }      
-        <animate attributeName="opacity" begin="0.81s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="85.1" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">              1                  --.: :                 .  .  ::. =.*+                                  
-        <animate attributeName="opacity" begin="0.86s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="94.9" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                 +++*      .                        .:--                      &lt;         
-        <animate attributeName="opacity" begin="0.91s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="104.6" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                -+:.    .     .                  ..*-*+                     0           
-        <animate attributeName="opacity" begin="0.95s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="114.3" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                =-=*  .       .            .        :+++                                
-        <animate attributeName="opacity" begin="0.99s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="124.0" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                 =++:                   .     .  .: .:+=                                
-        <animate attributeName="opacity" begin="1.04s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="133.8" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                 -*=:    .        .    .      .    -==+                                 
-        <animate attributeName="opacity" begin="1.08s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="143.5" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                  +-::  . :  .               .    .:=*=                   }        /    
-        <animate attributeName="opacity" begin="1.13s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="153.2" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                  ++.=         .                  -=-=                                  
-        <animate attributeName="opacity" begin="1.17s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="162.9" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">        &lt;                          *-*..             .          :.*+                {                   
-        <animate attributeName="opacity" begin="1.22s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="172.7" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                     ++--     . .:           : =*-+                                     
-        <animate attributeName="opacity" begin="1.27s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="182.4" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                        -+.+           .     *.==                                       
-        <animate attributeName="opacity" begin="1.31s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="192.1" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                           ====:  . : ::.*-*+*                                          
-        <animate attributeName="opacity" begin="1.35s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="201.8" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                  0                         =-:. .     .+=**                                            
-        <animate attributeName="opacity" begin="1.40s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="211.6" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                            -*-.   .    +.*+                                            
-        <animate attributeName="opacity" begin="1.44s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="221.3" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                            +*:= .      ===-                         &gt;                  
-        <animate attributeName="opacity" begin="1.49s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="231.0" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                  ==*.. :.     :     .       . . :.-=                                   
-        <animate attributeName="opacity" begin="1.53s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="240.7" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                 +=::  :    : .      :   .. .     +:-*                                  
-        <animate attributeName="opacity" begin="1.58s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="250.5" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                ==..   . ..::   :  .               ..-+                                 
-        <animate attributeName="opacity" begin="1.62s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="260.2" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">      }                        +*.:   .     :          .  ::    :.    -.-*                              
-        <animate attributeName="opacity" begin="1.67s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="269.9" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                              ++.+       . :  .           .:       :   *.=-                             
-        <animate attributeName="opacity" begin="1.71s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="279.6" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                            -*:= :    :   : .  ..           :.          -*-*                            
-        <animate attributeName="opacity" begin="1.76s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="289.4" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                           =++-     .     .                    : .  . .   -*++            /             
-        <animate attributeName="opacity" begin="1.80s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="299.1" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                         =*.=     .       .   . :        .  .  :     ..:  -:**                          
-        <animate attributeName="opacity" begin="1.85s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="308.8" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                        *+.:    : .            :     .  . :  .  ...        *:-+                         
-        <animate attributeName="opacity" begin="1.90s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="318.5" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                       =*.:   .       .     .   :          :    ::     :      :.+-  &lt;                   
-        <animate attributeName="opacity" begin="1.94s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="328.2" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">         {            +=.+  :           +*++*-=+*=--*---=***++-*     .         ..+*                     
-        <animate attributeName="opacity" begin="1.98s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="338.0" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                    =-+= .  .   .       *++=+-=+-=--=*=++++-*-*=        :   .   -+-=            1       
-        <animate attributeName="opacity" begin="2.03s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="347.7" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                   -+:-   :.:           +-+       #    #+   = -*  :.       .     +.-*                   
-        <animate attributeName="opacity" begin="2.08s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="357.4" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">    }{            +=:: . :      .      .*- =+  + #++# =# #+ = =-     .  .         .+=+-                 
-        <animate attributeName="opacity" begin="2.12s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="367.1" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                =+=..:  :               +=# # =   == +   +=   =+           .     :  ...++          1    
-        <animate attributeName="opacity" begin="2.17s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="376.9" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">              --.*..     :              --=#+ #=##=# =#= =   ===   : :.        .  :: .=*-               
-        <animate attributeName="opacity" begin="2.21s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="386.6" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">             -*+. .            +**--+.++-*=+ = #= #  #+##== =+-++.....*-*     : :     .-*-              
-        <animate attributeName="opacity" begin="2.25s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="396.3" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">            -=:-  0       .    =*+:-.-:***-+--++=-=-*--+-*=-*-**...:*:===       .       ..*-            
-        <animate attributeName="opacity" begin="2.30s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="406.0" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">          -+:+.   . : :  :     ===:-+=*--==+*+*=*+*--*=*-=-**=-==*++==:*=: .  ..      : ..*-*           
-        <animate attributeName="opacity" begin="2.34s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="415.8" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">         =-.-   .   :    .     :.. .     . .. .     ...  ..        .  ::     :         :  ..-*          
-        <animate attributeName="opacity" begin="2.39s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="425.5" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">        --.- ::.    . :        .   ..      :.   . .      . : :.  :   ...      :           :  +:=*       
-        <animate attributeName="opacity" begin="2.43s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="435.2" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">      1+=-      .    .      .               :    :    .   :        .   .  .    .     :    :  .+-+       
-        <animate attributeName="opacity" begin="2.48s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="444.9" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">      -+:-          :: :             .           . .     .  .. ..  .       :.              :  *.--      
-        <animate attributeName="opacity" begin="2.52s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="454.7" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">      *=:.   . .        :             .  .   .::            :       .    :.      . .     .     **=-     
-        <animate attributeName="opacity" begin="2.57s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="464.4" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">     --*1. .                 .  :  .      . .   ..         :          . :.                  . -/+=      
-        <animate attributeName="opacity" begin="2.61s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="474.1" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">      *+.1      :    .  .:        ::       :     :  :   .            . :       :   :    .  .  :.--      
-        <animate attributeName="opacity" begin="2.66s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="483.8" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">     ++.+&lt;   :   : :    . .:    ..  . .:::     . :.       . .    :     .           . .        -.=+      
-        <animate attributeName="opacity" begin="2.71s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="493.6" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">      =+*.  .     .             ::.   . . .    . :..:         :     .   .:  .:         .     :+.++      
-        <animate attributeName="opacity" begin="2.75s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="503.3" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                                                                                        
-        <animate attributeName="opacity" begin="2.79s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="513.0" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                                                                                        
-        <animate attributeName="opacity" begin="2.84s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="522.7" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                                                                                        
-        <animate attributeName="opacity" begin="2.88s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="532.5" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                                                                                        
-        <animate attributeName="opacity" begin="2.93s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="542.2" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                                                                                        
-        <animate attributeName="opacity" begin="2.98s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="551.9" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                                                                                        
-        <animate attributeName="opacity" begin="3.02s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
-      <text x="0" y="561.6" font-family="'JetBrains Mono',monospace" font-size="9.19" letter-spacing="0.5" fill="url(#mapGrad)" opacity="0">                                                                                                        
-        <animate attributeName="opacity" begin="3.06s" dur="0.35s" from="0" to="1" fill="freeze"/>
-      </text>
+      
+      
+      
+      
+    <svg x="16" y="16" width="768" height="168" viewBox="0 0 767.3399999999999 160" preserveAspectRatio="xMidYMid meet">
+      <text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="8.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                                                                                                                                   </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="18.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                                                                                                                                   </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="28.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                             ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░                                                                     </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="38.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                ░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░                                                                    </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="48.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                       ░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░                                                                </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="58.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                  ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░                 </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="68.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">              ░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒░░░░██████████████████░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░             </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="78.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██████████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░           </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="88.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░             </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="98.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                      ░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░                  </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="108.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                         ░░░░░░░░░░░░▒▒▒████████████████████████████████████▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░                        </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="118.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                         ░░░░██████████████████████████████████████████████████████████▒▒▒░░░░░░░░░░                               </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="128.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                        ░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░                                       </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="138.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                      ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░                                                  </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="148.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                             ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░                                                                </text>
+<text x="0.00 5.22 10.44 15.66 20.88 26.10 31.32 36.54 41.76 46.98 52.20 57.42 62.64 67.86 73.08 78.30 83.52 88.74 93.96 99.18 104.40 109.62 114.84 120.06 125.28 130.50 135.72 140.94 146.16 151.38 156.60 161.82 167.04 172.26 177.48 182.70 187.92 193.14 198.36 203.58 208.80 214.02 219.24 224.46 229.68 234.90 240.12 245.34 250.56 255.78 261.00 266.22 271.44 276.66 281.88 287.10 292.32 297.54 302.76 307.98 313.20 318.42 323.64 328.86 334.08 339.30 344.52 349.74 354.96 360.18 365.40 370.62 375.84 381.06 386.28 391.50 396.72 401.94 407.16 412.38 417.60 422.82 428.04 433.26 438.48 443.70 448.92 454.14 459.36 464.58 469.80 475.02 480.24 485.46 490.68 495.90 501.12 506.34 511.56 516.78 522.00 527.22 532.44 537.66 542.88 548.10 553.32 558.54 563.76 568.98 574.20 579.42 584.64 589.86 595.08 600.30 605.52 610.74 615.96 621.18 626.40 631.62 636.84 642.06 647.28 652.50 657.72 662.94 668.16 673.38 678.60 683.82 689.04 694.26 699.48 704.70 709.92 715.14 720.36 725.58 730.80 736.02 741.24 746.46 751.68 756.90 762.12" y="158.5" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="9" fill="#22D3EE" xml:space="preserve">                                                                                                                                                   </text>
+    </svg>
+  
+  
     </g>
-    <rect x="62" y="174" width="590" height="2.5" fill="#2563EB" opacity="0.15">
-      <animate attributeName="y" values="174;738;174" dur="5s" repeatCount="indefinite"/>
-    </rect>
-  </g>
+  
 
-  <!-- SYSTEM.INFO panel -->
-  <rect x="676" y="174" width="662" height="564" rx="8" fill="none" stroke="rgba(15,23,42,.10)" stroke-width="1"/>
-  <text x="676" y="164" font-family="'JetBrains Mono',monospace" font-size="12.5" letter-spacing="2" fill="#64748B">SYSTEM.INFO</text>
-  <g clip-path="url(#mapClip)" clip-rule="nonzero">
-  </g>
-  <g transform="translate(698,208)">
+    <g transform="translate(0, 210)" id="widget-widget_fote_greeting">
+
+      
+      
+      
+      
+      
+    <svg x="16" y="16" width="768" height="58" viewBox="0 0 93.6 14.399999999999999" preserveAspectRatio="xMidYMid meet">
+      <text x="0.00 7.20 14.40 21.60 28.80 36.00 43.20 50.40 57.60 64.80 72.00 79.20 86.40" y="12.239999999999998" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="12" fill="#22D3EE" xml:space="preserve">AHMED // FOTE</text>
+    </svg>
+  
+  
+    </g>
+  
+
+    <g transform="translate(0, 310)" id="widget-widget_fote_social_row">
+
+      
+      
+      
+      
+      
+    <svg width="800" height="40" viewBox="0 0 800 48" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        
+    <linearGradient id="grad-pill-github-175-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="10%" stop-color="#111111"></stop>
+<stop offset="50%" stop-color="#eeeeee"></stop>
+<stop offset="60%" stop-color="#ffffff"></stop>
+<stop offset="80%" stop-color="#111111"></stop>
+<stop offset="100%" stop-color="#555555"></stop>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+  
+
+    <linearGradient id="grad-pill-linkedin-241-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="10%" stop-color="#111111"></stop>
+<stop offset="50%" stop-color="#eeeeee"></stop>
+<stop offset="60%" stop-color="#0A66C2"></stop>
+<stop offset="80%" stop-color="#111111"></stop>
+<stop offset="100%" stop-color="#555555"></stop>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+  
+
+    <linearGradient id="grad-pill-x-307-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="10%" stop-color="#222222"></stop>
+<stop offset="50%" stop-color="#dddddd"></stop>
+<stop offset="60%" stop-color="#ffffff"></stop>
+<stop offset="80%" stop-color="#222222"></stop>
+<stop offset="100%" stop-color="#555555"></stop>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+  
+
+    <linearGradient id="grad-pill-gmail-373-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="10%" stop-color="#111111"></stop>
+<stop offset="50%" stop-color="#eeeeee"></stop>
+<stop offset="60%" stop-color="#EA4335"></stop>
+<stop offset="80%" stop-color="#111111"></stop>
+<stop offset="100%" stop-color="#555555"></stop>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+  
+
+    <linearGradient id="grad-pill-youtube-439-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="10%" stop-color="#111111"></stop>
+<stop offset="50%" stop-color="#eeeeee"></stop>
+<stop offset="60%" stop-color="#FF0000"></stop>
+<stop offset="80%" stop-color="#111111"></stop>
+<stop offset="100%" stop-color="#555555"></stop>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+  
+
+    <linearGradient id="grad-pill-instagram-505-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="10%" stop-color="#111111"></stop>
+<stop offset="50%" stop-color="#eeeeee"></stop>
+<stop offset="60%" stop-color="#E4405F"></stop>
+<stop offset="80%" stop-color="#111111"></stop>
+<stop offset="100%" stop-color="#555555"></stop>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+  
+
+    <linearGradient id="grad-pill-facebook-571-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="10%" stop-color="#111111"></stop>
+<stop offset="50%" stop-color="#eeeeee"></stop>
+<stop offset="60%" stop-color="#1877F2"></stop>
+<stop offset="80%" stop-color="#111111"></stop>
+<stop offset="100%" stop-color="#555555"></stop>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+  
+      </defs>
+      <g>
+        
+    <g id="pill-github-175-2">
+      <!-- Outer rotating gradient border -->
+      <rect x="175" y="2" width="54" height="44" rx="22" ry="22" fill="none" stroke="url(#grad-pill-github-175-2)" stroke-width="1.8" />
+
+      <!-- Dark container background with subtle glow -->
+      <rect x="176" y="3" width="52" height="42" rx="21" ry="21" fill="#141414" />
+
+      <!-- Inner highlight layer -->
+      <rect x="176" y="3" width="52" height="42" rx="21" ry="21" fill="rgba(255,255,255,0.03)" />
+
+      <!-- Icon & Text Content -->
+      <g transform="translate(193, 15) scale(1)">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M9 1.5C4.858 1.5 1.5 4.858 1.5 9c0 3.314 2.149 6.126 5.13 7.12.375.068.513-.163.513-.361v-1.266c-2.087.454-2.527-.946-2.527-.946-.341-.867-.833-1.098-.833-1.098-.681-.466.052-.456.052-.456.753.053 1.15.773 1.15.773.67 1.147 1.756.816 2.184.624.068-.485.262-.816.476-1.003-1.666-.19-3.418-.833-3.418-3.708 0-.819.292-1.488.773-2.013-.078-.19-.335-.952.073-1.986 0 0 .63-.202 2.063.769.598-.166 1.24-.249 1.878-.252.637.003 1.279.086 1.878.252 1.432-.971 2.061-.769 2.061-.769.41 1.034.153 1.796.075 1.986.482.525.772 1.194.772 2.013 0 2.883-1.755 3.515-3.426 3.702.27.233.51.691.51 1.393v2.065c0 .201.136.433.517.359C14.354 15.122 16.5 12.312 16.5 9c0-4.142-3.358-7.5-7.5-7.5z"/>
+        </svg>
+      </g>
+      
+    </g>
+  
+
+    <g id="pill-linkedin-241-2">
+      <!-- Outer rotating gradient border -->
+      <rect x="241" y="2" width="54" height="44" rx="22" ry="22" fill="none" stroke="url(#grad-pill-linkedin-241-2)" stroke-width="1.8" />
+
+      <!-- Dark container background with subtle glow -->
+      <rect x="242" y="3" width="52" height="42" rx="21" ry="21" fill="#002244" />
+
+      <!-- Inner highlight layer -->
+      <rect x="242" y="3" width="52" height="42" rx="21" ry="21" fill="rgba(255,255,255,0.03)" />
+
+      <!-- Icon & Text Content -->
+      <g transform="translate(259, 15) scale(1)">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path fill="#0A66C2" d="M2.5 3.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-1.5 2h3v11h-3v-11zm5 0h2.9v1.5h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8v6.4h-3v-5.7c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.8h-3v-11z"/>
+        </svg>
+      </g>
+      
+    </g>
+  
+
+    <g id="pill-x-307-2">
+      <!-- Outer rotating gradient border -->
+      <rect x="307" y="2" width="54" height="44" rx="22" ry="22" fill="none" stroke="url(#grad-pill-x-307-2)" stroke-width="1.8" />
+
+      <!-- Dark container background with subtle glow -->
+      <rect x="308" y="3" width="52" height="42" rx="21" ry="21" fill="#101010" />
+
+      <!-- Inner highlight layer -->
+      <rect x="308" y="3" width="52" height="42" rx="21" ry="21" fill="rgba(255,255,255,0.03)" />
+
+      <!-- Icon & Text Content -->
+      <g transform="translate(325, 15) scale(1)">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path fill="#ffffff" d="M13.2 2h2.5l-5.4 6.2L16.6 16h-5l-3.9-5.1L3.2 16H.7l5.8-6.6L.4 2h5.1l3.5 4.7L13.2 2zm-.9 12.5h1.4L4.8 3.4H3.3l9 11.1z"/>
+        </svg>
+      </g>
+      
+    </g>
+  
+
+    <g id="pill-gmail-373-2">
+      <!-- Outer rotating gradient border -->
+      <rect x="373" y="2" width="54" height="44" rx="22" ry="22" fill="none" stroke="url(#grad-pill-gmail-373-2)" stroke-width="1.8" />
+
+      <!-- Dark container background with subtle glow -->
+      <rect x="374" y="3" width="52" height="42" rx="21" ry="21" fill="#331010" />
+
+      <!-- Inner highlight layer -->
+      <rect x="374" y="3" width="52" height="42" rx="21" ry="21" fill="rgba(255,255,255,0.03)" />
+
+      <!-- Icon & Text Content -->
+      <g transform="translate(391, 15) scale(1)">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path fill="#EA4335" d="M1.5 4.5v9a1.5 1.5 0 0 0 1.5 1.5h1.5V8.25L9 11.25l4.5-3v6.75H15a1.5 1.5 0 0 0 1.5-1.5v-9L9 8.25 1.5 4.5z"/><path fill="#FBBC05" d="M16.5 4.5V3A1.5 1.5 0 0 0 15 1.5h-1.5L9 4.5l4.5 3.75 3-3.75z"/><path fill="#4285F4" d="M1.5 4.5l3 3.75L9 4.5 4.5 1.5H3A1.5 1.5 0 0 0 1.5 3v1.5z"/>
+        </svg>
+      </g>
+      
+    </g>
+  
+
+    <g id="pill-youtube-439-2">
+      <!-- Outer rotating gradient border -->
+      <rect x="439" y="2" width="54" height="44" rx="22" ry="22" fill="none" stroke="url(#grad-pill-youtube-439-2)" stroke-width="1.8" />
+
+      <!-- Dark container background with subtle glow -->
+      <rect x="440" y="3" width="52" height="42" rx="21" ry="21" fill="#3b0d0d" />
+
+      <!-- Inner highlight layer -->
+      <rect x="440" y="3" width="52" height="42" rx="21" ry="21" fill="rgba(255,255,255,0.03)" />
+
+      <!-- Icon & Text Content -->
+      <g transform="translate(457, 15) scale(1)">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path fill="#FF0000" d="M16.5 5.5s-.2-1.2-.7-1.7c-.7-.7-1.4-.7-1.8-.8C11.5 2.8 9 2.8 9 2.8s-2.5 0-5 .2c-.4.1-1.1.1-1.8.8-.5.5-.7 1.7-.7 1.7S1.3 7 1.3 8.4v1.2c0 1.4.2 2.9.2 2.9s.2 1.2.7 1.7c.7.7 1.6.7 2 .8 1.5.1 4.8.2 4.8.2s2.5 0 5-.2c.4-.1 1.1-.1 1.8-.8.5-.5.7-1.7.7-1.7s.2-1.5.2-2.9V8.4c0-1.4-.2-2.9-.2-2.9zM7.5 11V6.5l4.5 2.25L7.5 11z"/>
+        </svg>
+      </g>
+      
+    </g>
+  
+
+    <g id="pill-instagram-505-2">
+      <!-- Outer rotating gradient border -->
+      <rect x="505" y="2" width="54" height="44" rx="22" ry="22" fill="none" stroke="url(#grad-pill-instagram-505-2)" stroke-width="1.8" />
+
+      <!-- Dark container background with subtle glow -->
+      <rect x="506" y="3" width="52" height="42" rx="21" ry="21" fill="#2b0a2b" />
+
+      <!-- Inner highlight layer -->
+      <rect x="506" y="3" width="52" height="42" rx="21" ry="21" fill="rgba(255,255,255,0.03)" />
+
+      <!-- Icon & Text Content -->
+      <g transform="translate(523, 15) scale(1)">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path fill="#f5f5f5" d="M9 3.5c1.792 0 2.004.007 2.712.039.655.03 1.011.139 1.248.231.314.122.538.267.773.502.235.235.38.459.502.773.092.237.201.593.231 1.248.032.708.039.92.039 2.712s-.007 2.004-.039 2.712c-.03.655-.139 1.011-.231 1.248-.122.314-.267.538-.502.773-.235.235-.459.38-.773.502-.237.092-.593.201-1.248.231-.708.032-.92.039-2.712.039s-2.004-.007-2.712-.039c-.655-.03-1.011-.139-1.248-.231-.314-.122-.538-.267-.773-.502-.235-.235-.38-.459-.502-.773-.092-.237-.201-.593-.231-1.248C3.507 11.004 3.5 10.792 3.5 9s.007-2.004.039-2.712c.03-.655.139-1.011.231-1.248.122-.314.267-.538.502-.773.235-.235.459-.38.773-.502.237-.092.593-.201 1.248-.231.708-.032.92-.039 2.712-.039zm0-1.5c-1.823 0-2.051.008-2.766.04-.714.033-1.202.146-1.629.312a3.868 3.868 0 0 0-1.398.91 3.868 3.868 0 0 0-.91 1.398c-.166.427-.279.915-.312 1.629C2.008 6.949 2 7.177 2 9c0 1.823.008 2.051.04 2.766.033.714.146 1.202.312 1.629.166.427.387.79.91 1.398.523.523.886.744 1.398.91.427.166.915.279 1.629.312.715.032.943.04 2.766.04s2.051-.008 2.766-.04c.714-.033 1.202-.146 1.629-.312.427-.166.875-.387 1.398-.91.523-.523.744-.886.91-1.398.166-.427.279-.915.312-1.629.032-.715.04-.943.04-2.766s-.008-2.051-.04-2.766c-.033-.714-.146-1.202-.312-1.629a3.868 3.868 0 0 0-.91-1.398 3.868 3.868 0 0 0-1.398-.91c-.427-.166-.915-.279-1.629-.312C11.051 2.008 10.823 2 9 2zm0 3.414A3.586 3.586 0 1 0 12.586 9 3.586 3.586 0 0 0 9 5.414zm0 5.758A2.172 2.172 0 1 1 11.172 9 2.172 2.172 0 0 1 9 11.172zm3.727-6.07a.838.838 0 1 1-.838-.838.838.838 0 0 1 .838.838z"/>
+        </svg>
+      </g>
+      
+    </g>
+  
+
+    <g id="pill-facebook-571-2">
+      <!-- Outer rotating gradient border -->
+      <rect x="571" y="2" width="54" height="44" rx="22" ry="22" fill="none" stroke="url(#grad-pill-facebook-571-2)" stroke-width="1.8" />
+
+      <!-- Dark container background with subtle glow -->
+      <rect x="572" y="3" width="52" height="42" rx="21" ry="21" fill="#0d1b3d" />
+
+      <!-- Inner highlight layer -->
+      <rect x="572" y="3" width="52" height="42" rx="21" ry="21" fill="rgba(255,255,255,0.03)" />
+
+      <!-- Icon & Text Content -->
+      <g transform="translate(589, 15) scale(1)">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path fill="#f5f5f5" d="M14.5 1.5H3.5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h5.5v-5.5H7.5V8.5H9V7c0-1.657 1.343-3 3-3h2v2.5h-1.5c-.552 0-1 .448-1 1v1h2.5l-.5 2.5h-2v5.5h3.5a2 2 0 0 0 2-2v-11a2 2 0 0 0-2-2z"/>
+        </svg>
+      </g>
+      
+    </g>
+  
+      </g>
+    </svg>
+  
+  
+    </g>
+  
+
+    <g transform="translate(0, 364)" id="widget-widget_fote_about_info">
+
+      
+      
+      
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="380" height="260" viewBox="0 0 490 400" preserveAspectRatio="xMidYMid meet" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+<defs><linearGradient id="infocard-bg-widget_fote_about_info" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A0E1A"/><stop offset="1" stop-color="#0d1117"/></linearGradient></defs>
+<rect width="490" height="400" rx="8" fill="url(#infocard-bg-widget_fote_about_info)"/>
+<rect x="0.5" y="0.5" width="489" height="399" rx="8" fill="none" stroke="#1E293B"/>
+<line x1="0" y1="30" x2="490" y2="30" stroke="#1E293B"/>
+<circle cx="20" cy="15" r="5" fill="#ff5f56"/>
+<circle cx="36" cy="15" r="5" fill="#ffbd2e"/>
+<circle cx="52" cy="15" r="5" fill="#27c93f"/>
+<text x="245" y="19" fill="#7d8590" font-size="12" text-anchor="middle">fotedev@github: ~$ neofetch</text>
+<g opacity="0" transform="translate(0,5)"><text x="20" y="60.0" font-size="14" font-weight="700"><tspan fill="#3fb950">fotedev</tspan><tspan fill="#7d8590">@</tspan><tspan fill="#22d3ee">github</tspan></text><line x1="140" y1="56.0" x2="470" y2="56.0" stroke="#1E293B" stroke-opacity="0.8"/><animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.15s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><text x="20" y="84.0" fill="#22D3EE" font-size="12.5" font-weight="700">Now</text><text x="112" y="84.0" fill="#c9d1d9" font-size="12.5">AI Product &amp; Full-Stack Engineer | CS &amp; AI Student
+@Assiut_National_University
+</text><animate attributeName="opacity" from="0" to="1" begin="0.21s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.21s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><text x="20" y="108.0" fill="#22D3EE" font-size="12.5" font-weight="700">Also</text><text x="112" y="108.0" fill="#c9d1d9" font-size="12.5">@Assiut National University</text><animate attributeName="opacity" from="0" to="1" begin="0.27s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.27s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><text x="20" y="132.0" fill="#22D3EE" font-size="12.5" font-weight="700">Loc</text><text x="112" y="132.0" fill="#c9d1d9" font-size="12.5">Egypt</text><animate attributeName="opacity" from="0" to="1" begin="0.33s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.33s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><text x="20" y="156.0" fill="#22D3EE" font-size="12.5" font-weight="700">Site</text><text x="112" y="156.0" fill="#c9d1d9" font-size="12.5">github.com</text><animate attributeName="opacity" from="0" to="1" begin="0.39s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.39s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><text x="20" y="192.0" fill="#58a6ff" font-size="12.5" font-weight="700">&#8212; Stack</text><line x1="72" y1="188.0" x2="470" y2="188.0" stroke="#1E293B" stroke-opacity="0.8"/><animate attributeName="opacity" from="0" to="1" begin="0.51s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.51s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><text x="20" y="216.0" fill="#22D3EE" font-size="12.5" font-weight="700">Langs</text><text x="112" y="216.0" fill="#c9d1d9" font-size="12.5">TypeScript, PowerShell, CSS</text><animate attributeName="opacity" from="0" to="1" begin="0.57s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.57s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><text x="20" y="240.0" fill="#22D3EE" font-size="12.5" font-weight="700">Frontend</text><text x="112" y="240.0" fill="#c9d1d9" font-size="12.5">React, Next.js, CSS, HTML</text><animate attributeName="opacity" from="0" to="1" begin="0.63s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.63s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><text x="20" y="264.0" fill="#22D3EE" font-size="12.5" font-weight="700">Backend</text><text x="112" y="264.0" fill="#c9d1d9" font-size="12.5">Node.js, Postgres, Express</text><animate attributeName="opacity" from="0" to="1" begin="0.69s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.69s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><text x="20" y="300.0" fill="#58a6ff" font-size="12.5" font-weight="700">&#8212; Highlights</text><line x1="112" y1="296.0" x2="470" y2="296.0" stroke="#1E293B" stroke-opacity="0.8"/><animate attributeName="opacity" from="0" to="1" begin="0.81s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.81s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><circle cx="23" cy="320.0" r="2.5" fill="#3fb950"/><text x="34" y="324.0" fill="#c9d1d9" font-size="12.5">11 public repos, 22 followers</text><animate attributeName="opacity" from="0" to="1" begin="0.87s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.87s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+<g opacity="0" transform="translate(0,5)"><circle cx="23" cy="344.0" r="2.5" fill="#3fb950"/><text x="34" y="348.0" fill="#c9d1d9" font-size="12.5">Active developer with 62 total stars</text><animate attributeName="opacity" from="0" to="1" begin="0.93s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.93s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>
+</svg>
+  
+    </g>
+  
+
+    <g transform="translate(396, 364)" id="widget-widget_fote_neural_stats">
+
+      
+      
+      
+      
+      
+    <svg xmlns="http://www.w3.org/2000/svg" width="404" height="260" viewBox="0 0 800 260" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <linearGradient id="nbg-widget_fote_neural_stats" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0b0f14"/>
+          <stop offset="100%" stop-color="#151c25"/>
+        </linearGradient>
+        <radialGradient id="nglow-widget_fote_neural_stats" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.9"/>
+          <stop offset="60%" stop-color="#22D3EE" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="glow-widget_fote_neural_stats" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="4" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <rect width="800" height="260" fill="url(#nbg-widget_fote_neural_stats)" rx="12"/>
+        <path d="M200 65 C266 65,334 65,400 65" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M200 65 C266 65,334 130,400 130" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M200 65 C266 65,334 195,400 195" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M200 130 C266 130,334 65,400 65" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M200 130 C266 130,334 130,400 130" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M200 130 C266 130,334 195,400 195" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M200 195 C266 195,334 65,400 65" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M200 195 C266 195,334 130,400 130" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M200 195 C266 195,334 195,400 195" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M400 65 C466 65,534 65,600 65" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M400 65 C466 65,534 130,600 130" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M400 65 C466 65,534 195,600 195" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M400 130 C466 130,534 65,600 65" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M400 130 C466 130,534 130,600 130" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M400 130 C466 130,534 195,600 195" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M400 195 C466 195,534 65,600 65" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M400 195 C466 195,534 130,600 130" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+  <path d="M400 195 C466 195,534 195,600 195" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="2.5s" repeatCount="indefinite" path="M200 65 C266 65,334 65,400 65"/>
+      </circle>
     
-      <g opacity="0">
-        <animate attributeName="opacity" begin="0.15s" dur="0.4s" from="0" to="1" fill="freeze"/>
-        <text x="0" y="0" font-family="'JetBrains Mono',monospace" font-size="19" font-weight="700" fill="#3B82F6">fotedev@github</text>
-        <line x1="61.6" y1="-6" x2="662" y2="-6" stroke="rgba(15,23,42,.10)" stroke-width="1" stroke-dasharray="2,3"/>
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.2s" repeatCount="indefinite" path="M200 65 C266 65,334 130,400 130"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.9s" repeatCount="indefinite" path="M200 65 C266 65,334 195,400 195"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="2.5s" repeatCount="indefinite" path="M200 130 C266 130,334 65,400 65"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.2s" repeatCount="indefinite" path="M200 130 C266 130,334 130,400 130"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.9s" repeatCount="indefinite" path="M200 130 C266 130,334 195,400 195"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="2.5s" repeatCount="indefinite" path="M200 195 C266 195,334 65,400 65"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.2s" repeatCount="indefinite" path="M200 195 C266 195,334 130,400 130"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.9s" repeatCount="indefinite" path="M200 195 C266 195,334 195,400 195"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="2.5s" repeatCount="indefinite" path="M400 65 C466 65,534 65,600 65"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.2s" repeatCount="indefinite" path="M400 65 C466 65,534 130,600 130"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.9s" repeatCount="indefinite" path="M400 65 C466 65,534 195,600 195"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="2.5s" repeatCount="indefinite" path="M400 130 C466 130,534 65,600 65"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.2s" repeatCount="indefinite" path="M400 130 C466 130,534 130,600 130"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.9s" repeatCount="indefinite" path="M400 130 C466 130,534 195,600 195"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="2.5s" repeatCount="indefinite" path="M400 195 C466 195,534 65,600 65"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.2s" repeatCount="indefinite" path="M400 195 C466 195,534 130,600 130"/>
+      </circle>
+    
+
+      <circle r="2.5" fill="#22D3EE" opacity="0.9" filter="url(#glow-widget_fote_neural_stats)">
+        <animateMotion dur="3.9s" repeatCount="indefinite" path="M400 195 C466 195,534 195,600 195"/>
+      </circle>
+    
+
+      <text x="200" y="18" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#22D3EE" opacity="0.7" font-weight="bold" letter-spacing="2">FRONTEND</text>
+    
+
+        <circle cx="200" cy="65" r="22" fill="url(#nglow-widget_fote_neural_stats)" opacity="0.5"/>
+        <circle cx="200" cy="65" r="14" fill="#151c25" stroke="#22D3EE" stroke-width="1.5" opacity="0.9"/>
+        <circle cx="200" cy="65" r="5" fill="#22D3EE" filter="url(#glow-widget_fote_neural_stats)"/>
+        <text x="200" y="93" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#CBD5E1" opacity="0.9">React</text>
+      
+
+        <circle cx="200" cy="130" r="22" fill="url(#nglow-widget_fote_neural_stats)" opacity="0.5"/>
+        <circle cx="200" cy="130" r="14" fill="#151c25" stroke="#22D3EE" stroke-width="1.5" opacity="0.9"/>
+        <circle cx="200" cy="130" r="5" fill="#22D3EE" filter="url(#glow-widget_fote_neural_stats)"/>
+        <text x="200" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#CBD5E1" opacity="0.9">Next.js</text>
+      
+
+        <circle cx="200" cy="195" r="22" fill="url(#nglow-widget_fote_neural_stats)" opacity="0.5"/>
+        <circle cx="200" cy="195" r="14" fill="#151c25" stroke="#22D3EE" stroke-width="1.5" opacity="0.9"/>
+        <circle cx="200" cy="195" r="5" fill="#22D3EE" filter="url(#glow-widget_fote_neural_stats)"/>
+        <text x="200" y="223" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#CBD5E1" opacity="0.9">Tailwind</text>
+      
+
+      <text x="400" y="18" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#22D3EE" opacity="0.7" font-weight="bold" letter-spacing="2">BACKEND</text>
+    
+
+        <circle cx="400" cy="65" r="22" fill="url(#nglow-widget_fote_neural_stats)" opacity="0.5"/>
+        <circle cx="400" cy="65" r="14" fill="#151c25" stroke="#22D3EE" stroke-width="1.5" opacity="0.9"/>
+        <circle cx="400" cy="65" r="5" fill="#22D3EE" filter="url(#glow-widget_fote_neural_stats)"/>
+        <text x="400" y="93" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#CBD5E1" opacity="0.9">Node.js</text>
+      
+
+        <circle cx="400" cy="130" r="22" fill="url(#nglow-widget_fote_neural_stats)" opacity="0.5"/>
+        <circle cx="400" cy="130" r="14" fill="#151c25" stroke="#22D3EE" stroke-width="1.5" opacity="0.9"/>
+        <circle cx="400" cy="130" r="5" fill="#22D3EE" filter="url(#glow-widget_fote_neural_stats)"/>
+        <text x="400" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#CBD5E1" opacity="0.9">Postgres</text>
+      
+
+        <circle cx="400" cy="195" r="22" fill="url(#nglow-widget_fote_neural_stats)" opacity="0.5"/>
+        <circle cx="400" cy="195" r="14" fill="#151c25" stroke="#22D3EE" stroke-width="1.5" opacity="0.9"/>
+        <circle cx="400" cy="195" r="5" fill="#22D3EE" filter="url(#glow-widget_fote_neural_stats)"/>
+        <text x="400" y="223" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#CBD5E1" opacity="0.9">Docker</text>
+      
+
+      <text x="600" y="18" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#22D3EE" opacity="0.7" font-weight="bold" letter-spacing="2">DEVOPS</text>
+    
+
+        <circle cx="600" cy="65" r="22" fill="url(#nglow-widget_fote_neural_stats)" opacity="0.5"/>
+        <circle cx="600" cy="65" r="14" fill="#151c25" stroke="#22D3EE" stroke-width="1.5" opacity="0.9"/>
+        <circle cx="600" cy="65" r="5" fill="#22D3EE" filter="url(#glow-widget_fote_neural_stats)"/>
+        <text x="600" y="93" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#CBD5E1" opacity="0.9">Git</text>
+      
+
+        <circle cx="600" cy="130" r="22" fill="url(#nglow-widget_fote_neural_stats)" opacity="0.5"/>
+        <circle cx="600" cy="130" r="14" fill="#151c25" stroke="#22D3EE" stroke-width="1.5" opacity="0.9"/>
+        <circle cx="600" cy="130" r="5" fill="#22D3EE" filter="url(#glow-widget_fote_neural_stats)"/>
+        <text x="600" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#CBD5E1" opacity="0.9">GitHub</text>
+      
+
+        <circle cx="600" cy="195" r="22" fill="url(#nglow-widget_fote_neural_stats)" opacity="0.5"/>
+        <circle cx="600" cy="195" r="14" fill="#151c25" stroke="#22D3EE" stroke-width="1.5" opacity="0.9"/>
+        <circle cx="600" cy="195" r="5" fill="#22D3EE" filter="url(#glow-widget_fote_neural_stats)"/>
+        <text x="600" y="223" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#CBD5E1" opacity="0.9">Linux</text>
+      
+    </svg>
+  
+  
+    </g>
+  
+
+    <g transform="translate(0, 640)" id="widget-widget_fote_stats_grid">
+
+      
+      
+      
+      
+      
+    <svg xmlns="http://www.w3.org/2000/svg" width="800" height="280" viewBox="0 0 800 330" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <style>
+          .field-serif { font-family: Georgia, serif; }
+          .field-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+        </style>
+        <pattern id="field-grid-widget_fote_stats_grid" width="32" height="32" patternUnits="userSpaceOnUse">
+          <path d="M32 0 H0 V32" fill="none" stroke="#47574E" stroke-opacity="0.12"/>
+        </pattern>
+      </defs>
+
+      <rect width="800" height="330" fill="#101916"/>
+      <rect x="10" y="10" width="780" height="310" fill="#1B2722" stroke="#47574E" stroke-width="1"/>
+      <rect x="10" y="10" width="780" height="310" fill="url(#field-grid-widget_fote_stats_grid)"/>
+
+      <!-- Dichotomous Key Panel -->
+      <g>
+        <rect x="25" y="25" width="165" height="280" fill="#22312A" fill-opacity="0.62" stroke="#47574E"/>
+        <text x="107" y="55" text-anchor="middle" class="field-mono" font-size="8" letter-spacing="2.1" fill="#6992A8">DICHOTOMOUS KEY</text>
+        <text x="107" y="90" text-anchor="middle" class="field-serif" font-size="20" font-style="italic" fill="#E8E8DA">Classification</text>
+        
+        <text x="107" y="180" text-anchor="middle" class="field-serif" font-size="52" font-weight="700" fill="#E8E8DA">08</text>
+        <text x="107" y="210" text-anchor="middle" class="field-mono" font-size="8" letter-spacing="1.8" fill="#C56350">TAXA OBSERVED</text>
       </g>
-        <g transform="translate(0,32.5)" opacity="0">
-          <animate attributeName="opacity" begin="0.40s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Subject</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ................... </tspan><tspan fill="#0F172A">FOTE (Ahmed)</tspan>
-          </text>
-        </g>
-        <g transform="translate(0,57.5)" opacity="0">
-          <animate attributeName="opacity" begin="0.53s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Role</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ...................... </tspan><tspan fill="#0F172A">Full-Stack AI Engineer</tspan>
-          </text>
-        </g>
-        <g transform="translate(0,82.5)" opacity="0">
-          <animate attributeName="opacity" begin="0.66s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Focus</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ..................... </tspan><tspan fill="#0F172A">Scalable GenAI &amp; Production RAG</tspan>
-          </text>
-        </g>
-        <g transform="translate(0,107.5)" opacity="0">
-          <animate attributeName="opacity" begin="0.79s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Project</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ................... </tspan><tspan fill="#0F172A">Masar X (AI Study Ecosystem)</tspan>
-          </text>
-        </g>
-        <g transform="translate(0,132.5)" opacity="0">
-          <animate attributeName="opacity" begin="0.92s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Status</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> .................... </tspan><tspan fill="#0F172A">Building • Shipping in Public</tspan>
-          </text>
-        </g>
-        <g transform="translate(0,157.5)" opacity="0">
-          <animate attributeName="opacity" begin="1.05s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">ToolChain</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ................. </tspan><tspan fill="#0F172A">VS Code, Git, Docker, Linux, Vercel</tspan>
-          </text>
-        </g>
-        <g transform="translate(0,192.5)" opacity="0">
-          <animate attributeName="opacity" begin="1.28s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">AI.Stack</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> .................. </tspan><tspan fill="#0F172A">RAG, MCP, pgvector, LangChain</tspan>
-          </text>
-        </g>
-        <g transform="translate(0,217.5)" opacity="0">
-          <animate attributeName="opacity" begin="1.41s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Core.Lang</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ................. </tspan><tspan fill="#0F172A">TypeScript, Python, JavaScript</tspan>
-          </text>
-        </g>
-        <g transform="translate(0,242.5)" opacity="0">
-          <animate attributeName="opacity" begin="1.54s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Core.UI/UX</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ................ </tspan><tspan fill="#0F172A">Next.js, React, Tailwind, Framer</tspan>
-          </text>
-        </g>
-        <g transform="translate(0,267.5)" opacity="0">
-          <animate attributeName="opacity" begin="1.67s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Core.Data</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ................. </tspan><tspan fill="#0F172A">Supabase, PostgreSQL, FastAPI</tspan>
-          </text>
-        </g>
-        <g transform="translate(0,292.5)" opacity="0">
-          <animate attributeName="opacity" begin="1.80s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Core.App</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> .................. </tspan><tspan fill="#0F172A">Web, Electron (Desktop), Multi-Platform</tspan>
-          </text>
-        </g>
-      <g transform="translate(0,325.0)" opacity="0">
-        <animate attributeName="opacity" begin="2.03s" dur="0.4s" from="0" to="1" fill="freeze"/>
-        <text font-family="'JetBrains Mono',monospace" font-size="15.5" font-weight="700" fill="#059669">- Direct Channels</text>
-        <line x1="175" y1="-6" x2="662" y2="-6" stroke="rgba(15,23,42,.10)" stroke-width="1" stroke-dasharray="2,3"/>
+
+      <!-- Taxonomy Headers -->
+      <g>
+        <text x="210" y="42" class="field-serif" font-size="16" font-style="italic" fill="#E8E8DA">Classification plate</text>
+        <text x="770" y="42" text-anchor="end" class="field-mono" font-size="8" letter-spacing="1.4" fill="#A7AFA4">TAXONOMY // VOL. 01</text>
+        <path d="M210 52 H770" stroke="#47574E" stroke-width="1"/>
+        <path d="M480 60 V300" stroke="#47574E" stroke-width="1"/>
       </g>
-        <g transform="translate(0,355.0)" opacity="0">
-          <animate attributeName="opacity" begin="2.18s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Grid.Mail</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ................. </tspan><tspan fill="#0F172A">fote.engineer@gmail.com</tspan>
-          </text>
+
+      <!-- Specimen Rows -->
+      
+        <g class="field-rise" style="animation-delay:0ms">
+          <circle cx="250" cy="81" r="5" fill="#699078"/>
+          <text x="265" y="77" font-family="ui-monospace, monospace" font-size="7.5" fill="#699078">01 / FOTEDEV</text>
+          <text x="265" y="93" font-family="sans-serif" font-size="11" font-weight="800" fill="#E8E8DA">Code</text>
+          <text x="265" y="105" font-family="sans-serif" font-size="8.5" fill="#A7AFA4">★ 12</text>
+          <path d="M265 111 H500" stroke="#47574E" stroke-width="0.5"/>
         </g>
-        <g transform="translate(0,380.0)" opacity="0">
-          <animate attributeName="opacity" begin="2.31s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Grid.LinkedIn</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ............. </tspan><tspan fill="#0F172A">linkedin.com/in/fotedev</tspan>
-          </text>
+      
+        <g class="field-rise" style="animation-delay:42ms">
+          <circle cx="250" cy="131" r="5" fill="#C56350"/>
+          <text x="265" y="127" font-family="ui-monospace, monospace" font-size="7.5" fill="#C56350">02 / MASAR-X-NEXT</text>
+          <text x="265" y="143" font-family="sans-serif" font-size="11" font-weight="800" fill="#E8E8DA">TypeScript</text>
+          <text x="265" y="155" font-family="sans-serif" font-size="8.5" fill="#A7AFA4">★ 6</text>
+          <path d="M265 161 H500" stroke="#47574E" stroke-width="0.5"/>
         </g>
-        <g transform="translate(0,405.0)" opacity="0">
-          <animate attributeName="opacity" begin="2.44s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Grid.Github</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> ............... </tspan><tspan fill="#0F172A">github.com/fotedev</tspan>
-          </text>
+      
+        <g class="field-rise" style="animation-delay:84ms">
+          <circle cx="250" cy="181" r="5" fill="#699078"/>
+          <text x="265" y="177" font-family="ui-monospace, monospace" font-size="7.5" fill="#699078">03 / GHOST</text>
+          <text x="265" y="193" font-family="sans-serif" font-size="11" font-weight="800" fill="#E8E8DA">PowerShell</text>
+          <text x="265" y="205" font-family="sans-serif" font-size="8.5" fill="#A7AFA4">★ 24</text>
+          <path d="M265 211 H500" stroke="#47574E" stroke-width="0.5"/>
         </g>
-        <g transform="translate(0,430.0)" opacity="0">
-          <animate attributeName="opacity" begin="2.57s" dur="0.4s" from="0" to="1" fill="freeze"/>
-          <text font-family="'JetBrains Mono',monospace" font-size="14.5">
-            <tspan fill="#2563EB" font-weight="700">Grid.Twitter</tspan><tspan fill="#64748B">:</tspan><tspan fill="#B9C3D4"> .............. </tspan><tspan fill="#0F172A">x.com/FoteTeam</tspan>
-          </text>
+      
+        <g class="field-rise" style="animation-delay:126ms">
+          <circle cx="250" cy="231" r="5" fill="#C56350"/>
+          <text x="265" y="227" font-family="ui-monospace, monospace" font-size="7.5" fill="#C56350">04 / ICONS-PACK</text>
+          <text x="265" y="243" font-family="sans-serif" font-size="11" font-weight="800" fill="#E8E8DA">Code</text>
+          <text x="265" y="255" font-family="sans-serif" font-size="8.5" fill="#A7AFA4">★ 2</text>
+          <path d="M265 261 H500" stroke="#47574E" stroke-width="0.5"/>
         </g>
-      <g transform="translate(0,465.0)" opacity="0">
-        <animate attributeName="opacity" begin="2.80s" dur="0.4s" from="0" to="1" fill="freeze"/>
-        <text font-family="'JetBrains Mono',monospace" font-size="15.5" font-weight="700" fill="#059669">- Production Architecture</text>
-        <line x1="250" y1="-6" x2="662" y2="-6" stroke="rgba(15,23,42,.10)" stroke-width="1" stroke-dasharray="2,3"/>
-      </g>
-      <g transform="translate(0,495.0)" opacity="0">
-        <animate attributeName="opacity" begin="2.95s" dur="0.4s" from="0" to="1" fill="freeze"/>
-        <rect x="0" y="-13" width="5" height="18" fill="#06B6D4"/>
-        <text x="14" y="1" font-family="'JetBrains Mono',monospace" font-size="14.5" fill="#0F172A">Explore repositories, live demos &amp; systems below ↓</text>
-      </g>
-  </g>
+      
+        <g class="field-rise" style="animation-delay:168ms">
+          <circle cx="520" cy="81" r="5" fill="#699078"/>
+          <text x="535" y="77" font-family="ui-monospace, monospace" font-size="7.5" fill="#699078">05 / YT-STYLUS-THEMES</text>
+          <text x="535" y="93" font-family="sans-serif" font-size="11" font-weight="800" fill="#E8E8DA">CSS</text>
+          <text x="535" y="105" font-family="sans-serif" font-size="8.5" fill="#A7AFA4">★ 0</text>
+          <path d="M535 111 H770" stroke="#47574E" stroke-width="0.5"/>
+        </g>
+      
+        <g class="field-rise" style="animation-delay:210ms">
+          <circle cx="520" cy="131" r="5" fill="#C56350"/>
+          <text x="535" y="127" font-family="ui-monospace, monospace" font-size="7.5" fill="#C56350">06 / CONTEXT</text>
+          <text x="535" y="143" font-family="sans-serif" font-size="11" font-weight="800" fill="#E8E8DA">Python</text>
+          <text x="535" y="155" font-family="sans-serif" font-size="8.5" fill="#A7AFA4">★ 17</text>
+          <path d="M535 161 H770" stroke="#47574E" stroke-width="0.5"/>
+        </g>
+      
+        <g class="field-rise" style="animation-delay:252ms">
+          <circle cx="520" cy="181" r="5" fill="#699078"/>
+          <text x="535" y="177" font-family="ui-monospace, monospace" font-size="7.5" fill="#699078">07 / MASARX-RELEASES</text>
+          <text x="535" y="193" font-family="sans-serif" font-size="11" font-weight="800" fill="#E8E8DA">Code</text>
+          <text x="535" y="205" font-family="sans-serif" font-size="8.5" fill="#A7AFA4">★ 1</text>
+          <path d="M535 211 H770" stroke="#47574E" stroke-width="0.5"/>
+        </g>
+      
+        <g class="field-rise" style="animation-delay:294ms">
+          <circle cx="520" cy="231" r="5" fill="#C56350"/>
+          <text x="535" y="227" font-family="ui-monospace, monospace" font-size="7.5" fill="#C56350">08 / CHATBOT</text>
+          <text x="535" y="243" font-family="sans-serif" font-size="11" font-weight="800" fill="#E8E8DA">Python</text>
+          <text x="535" y="255" font-family="sans-serif" font-size="8.5" fill="#A7AFA4">★ 0</text>
+          <path d="M535 261 H770" stroke="#47574E" stroke-width="0.5"/>
+        </g>
+      
+    </svg>
+  
+  
+    </g>
+  
+
+    <g transform="translate(0, 936)" id="widget-widget_fote_heatmap">
+
+      
+      
+      
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="800" height="204" viewBox="0 0 800 204" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+<style>@keyframes cell-widget_fote_heatmap {  0%   { opacity: 0; transform: translateY(-6px); }  100% { opacity: 1; transform: translateY(0); }}.c-widget_fote_heatmap { opacity: 0; animation: cell-widget_fote_heatmap 0.42s cubic-bezier(.2,.8,.2,1) both; }</style>
+<defs><linearGradient id="heatmap-bg-widget_fote_heatmap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1420"/><stop offset="1" stop-color="#0A0E1A"/></linearGradient></defs>
+<rect width="800" height="204" rx="8" fill="url(#heatmap-bg-widget_fote_heatmap)"/>
+<rect x="0.5" y="0.5" width="799" height="203" rx="8" fill="none" stroke="#1E293B" stroke-width="1" stroke-opacity="0.55"/>
+<line x1="0" y1="30" x2="800" y2="30" stroke="#1E293B" stroke-opacity="0.35"/>
+<circle cx="22" cy="15" r="5" fill="#ff5f56"/>
+<circle cx="38" cy="15" r="5" fill="#ffbd2e"/>
+<circle cx="54" cy="15" r="5" fill="#27c93f"/>
+<text x="400" y="19" fill="#7d8590" font-size="12" text-anchor="middle">fotedev@github: ~/contributions --graph</text>
+<text x="65.75" y="44" fill="#7d8590" font-size="10">Oct</text>
+<text x="120.75" y="44" fill="#7d8590" font-size="10">Nov</text>
+<text x="189.5" y="44" fill="#7d8590" font-size="10">Dec</text>
+<text x="244.5" y="44" fill="#7d8590" font-size="10">Jan</text>
+<text x="299.5" y="44" fill="#7d8590" font-size="10">Feb</text>
+<text x="354.5" y="44" fill="#7d8590" font-size="10">Mar</text>
+<text x="423.25" y="44" fill="#7d8590" font-size="10">Apr</text>
+<text x="478.25" y="44" fill="#7d8590" font-size="10">May</text>
+<text x="547" y="44" fill="#7d8590" font-size="10">Jun</text>
+<text x="602" y="44" fill="#7d8590" font-size="10">Jul</text>
+<text x="657" y="44" fill="#7d8590" font-size="10">Aug</text>
+<text x="725.75" y="44" fill="#7d8590" font-size="10">Sep</text>
+<text x="22" y="72.3" fill="#7d8590" font-size="9">Mon</text>
+<text x="22" y="99.8" fill="#7d8590" font-size="9">Wed</text>
+<text x="22" y="127.3" fill="#7d8590" font-size="9">Fri</text>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.000s" x="52" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-09-28: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.045s" x="52" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-09-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.090s" x="52" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-09-30: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.135s" x="52" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-01: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.180s" x="52" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-02: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.225s" x="52" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-03: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.270s" x="52" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-04: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.018s" x="65.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-05: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.063s" x="65.75" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-06: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.108s" x="65.75" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-07: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.153s" x="65.75" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-08: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.198s" x="65.75" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-09: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.243s" x="65.75" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-10: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.288s" x="65.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-11: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.036s" x="79.5" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-12: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.081s" x="79.5" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-13: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.126s" x="79.5" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-14: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.171s" x="79.5" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-15: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.216s" x="79.5" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-16: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.261s" x="79.5" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-17: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.306s" x="79.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-18: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.054s" x="93.25" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-19: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.099s" x="93.25" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-20: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.144s" x="93.25" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-21: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.189s" x="93.25" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-22: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.234s" x="93.25" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-23: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.279s" x="93.25" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-24: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.324s" x="93.25" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-25: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.072s" x="107" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-26: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.117s" x="107" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-27: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.162s" x="107" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-28: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.207s" x="107" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.252s" x="107" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-30: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.297s" x="107" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-10-31: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.342s" x="107" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-01: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.090s" x="120.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-02: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.135s" x="120.75" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-03: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.180s" x="120.75" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-04: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.225s" x="120.75" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-05: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.270s" x="120.75" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-06: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.315s" x="120.75" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-07: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.360s" x="120.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-08: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.108s" x="134.5" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-09: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.153s" x="134.5" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-10: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.198s" x="134.5" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-11: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.243s" x="134.5" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-12: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.288s" x="134.5" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-13: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.333s" x="134.5" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-14: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.378s" x="134.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-15: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.126s" x="148.25" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-16: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.171s" x="148.25" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-17: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.216s" x="148.25" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-18: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.261s" x="148.25" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-19: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.306s" x="148.25" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-20: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.351s" x="148.25" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-21: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.396s" x="148.25" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-22: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.144s" x="162" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-23: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.189s" x="162" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-24: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.234s" x="162" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-25: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.279s" x="162" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-26: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.324s" x="162" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-27: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.369s" x="162" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-28: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.414s" x="162" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.162s" x="175.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-11-30: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.207s" x="175.75" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-01: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.252s" x="175.75" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-02: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.297s" x="175.75" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-03: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.342s" x="175.75" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-04: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.387s" x="175.75" y="118.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2025-12-05: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.432s" x="175.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-06: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.180s" x="189.5" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-07: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.225s" x="189.5" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-08: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.270s" x="189.5" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-09: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.315s" x="189.5" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-10: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.360s" x="189.5" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-11: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.405s" x="189.5" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-12: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.450s" x="189.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-13: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.198s" x="203.25" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-14: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.243s" x="203.25" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-15: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.288s" x="203.25" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-16: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.333s" x="203.25" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-17: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.378s" x="203.25" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-18: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.423s" x="203.25" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-19: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.468s" x="203.25" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-20: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.216s" x="217" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-21: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.261s" x="217" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-22: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.306s" x="217" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-23: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.351s" x="217" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-24: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.396s" x="217" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-25: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.441s" x="217" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-26: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.486s" x="217" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-27: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.234s" x="230.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-28: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.279s" x="230.75" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.324s" x="230.75" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-30: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.369s" x="230.75" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2025-12-31: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.414s" x="230.75" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-01: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.459s" x="230.75" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-02: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.504s" x="230.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-03: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.252s" x="244.5" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-04: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.297s" x="244.5" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-05: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.342s" x="244.5" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-06: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.387s" x="244.5" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-07: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.432s" x="244.5" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-08: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.477s" x="244.5" y="118.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-01-09: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.522s" x="244.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-10: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.270s" x="258.25" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-11: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.315s" x="258.25" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-12: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.360s" x="258.25" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-13: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.405s" x="258.25" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-14: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.450s" x="258.25" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-15: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.495s" x="258.25" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-16: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.540s" x="258.25" y="132.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-01-17: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.288s" x="272" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-18: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.333s" x="272" y="63.75" width="11" height="11" rx="2.5" fill="#69f0a0"><title>2026-01-19: 58 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.378s" x="272" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-20: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.423s" x="272" y="91.25" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-01-21: 24 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.468s" x="272" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-22: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.513s" x="272" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-23: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.558s" x="272" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-24: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.306s" x="285.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-25: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.351s" x="285.75" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-26: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.396s" x="285.75" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-27: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.441s" x="285.75" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-28: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.486s" x="285.75" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.531s" x="285.75" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-30: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.576s" x="285.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-01-31: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.324s" x="299.5" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-02-01: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.369s" x="299.5" y="63.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-02-02: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.414s" x="299.5" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-02-03: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.459s" x="299.5" y="91.25" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-02-04: 2 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.504s" x="299.5" y="105" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-02-05: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.549s" x="299.5" y="118.75" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-02-06: 7 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.594s" x="299.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-02-07: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.342s" x="313.25" y="50" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-02-08: 22 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.387s" x="313.25" y="63.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-02-09: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.432s" x="313.25" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-02-10: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.477s" x="313.25" y="91.25" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-02-11: 10 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.522s" x="313.25" y="105" width="11" height="11" rx="2.5" fill="#39d353"><title>2026-02-12: 40 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.567s" x="313.25" y="118.75" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-02-13: 10 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.612s" x="313.25" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-02-14: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.360s" x="327" y="50" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-02-15: 9 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.405s" x="327" y="63.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-02-16: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.450s" x="327" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-02-17: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.495s" x="327" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-02-18: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.540s" x="327" y="105" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-02-19: 8 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.585s" x="327" y="118.75" width="11" height="11" rx="2.5" fill="#69f0a0"><title>2026-02-20: 72 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.630s" x="327" y="132.5" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-02-21: 28 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.378s" x="340.75" y="50" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-02-22: 24 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.423s" x="340.75" y="63.75" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-02-23: 15 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.468s" x="340.75" y="77.5" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-02-24: 8 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.513s" x="340.75" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-02-25: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.558s" x="340.75" y="105" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-02-26: 2 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.603s" x="340.75" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-02-27: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.648s" x="340.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-02-28: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.396s" x="354.5" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-01: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.441s" x="354.5" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-02: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.486s" x="354.5" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-03: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.531s" x="354.5" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-04: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.576s" x="354.5" y="105" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-03-05: 20 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.621s" x="354.5" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-06: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.666s" x="354.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-07: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.414s" x="368.25" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-08: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.459s" x="368.25" y="63.75" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-03-09: 19 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.504s" x="368.25" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-10: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.549s" x="368.25" y="91.25" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-03-11: 12 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.594s" x="368.25" y="105" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-03-12: 16 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.639s" x="368.25" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-13: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.684s" x="368.25" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-14: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.432s" x="382" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-15: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.477s" x="382" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-16: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.522s" x="382" y="77.5" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-03-17: 8 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.567s" x="382" y="91.25" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-03-18: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.612s" x="382" y="105" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-03-19: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.657s" x="382" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-20: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.702s" x="382" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-21: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.450s" x="395.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-22: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.495s" x="395.75" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-23: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.540s" x="395.75" y="77.5" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-03-24: 27 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.585s" x="395.75" y="91.25" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-03-25: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.630s" x="395.75" y="105" width="11" height="11" rx="2.5" fill="#39d353"><title>2026-03-26: 35 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.675s" x="395.75" y="118.75" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-03-27: 12 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.720s" x="395.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-28: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.468s" x="409.5" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.513s" x="409.5" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-03-30: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.558s" x="409.5" y="77.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-03-31: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.603s" x="409.5" y="91.25" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-04-01: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.648s" x="409.5" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-02: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.693s" x="409.5" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-03: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.738s" x="409.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-04: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.486s" x="423.25" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-05: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.531s" x="423.25" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-06: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.576s" x="423.25" y="77.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-04-07: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.621s" x="423.25" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-08: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.666s" x="423.25" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-09: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.711s" x="423.25" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-10: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.756s" x="423.25" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-11: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.504s" x="437" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-12: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.549s" x="437" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-13: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.594s" x="437" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-14: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.639s" x="437" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-15: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.684s" x="437" y="105" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-04-16: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.729s" x="437" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-17: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.774s" x="437" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-18: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.522s" x="450.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-19: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.567s" x="450.75" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-20: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.612s" x="450.75" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-21: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.657s" x="450.75" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-22: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.702s" x="450.75" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-23: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.747s" x="450.75" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-24: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.792s" x="450.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-25: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.540s" x="464.5" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-26: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.585s" x="464.5" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-27: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.630s" x="464.5" y="77.5" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-04-28: 13 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.675s" x="464.5" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.720s" x="464.5" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-04-30: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.765s" x="464.5" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-01: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.810s" x="464.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-02: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.558s" x="478.25" y="50" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-05-03: 9 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.603s" x="478.25" y="63.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-05-04: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.648s" x="478.25" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-05: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.693s" x="478.25" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-06: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.738s" x="478.25" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-07: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.783s" x="478.25" y="118.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-05-08: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.828s" x="478.25" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-09: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.576s" x="492" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-10: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.621s" x="492" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-11: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.666s" x="492" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-12: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.711s" x="492" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-13: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.756s" x="492" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-14: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.801s" x="492" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-15: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.846s" x="492" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-16: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.594s" x="505.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-17: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.639s" x="505.75" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-18: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.684s" x="505.75" y="77.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-05-19: 2 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.729s" x="505.75" y="91.25" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-05-20: 5 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.774s" x="505.75" y="105" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-05-21: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.819s" x="505.75" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-22: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.864s" x="505.75" y="132.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-05-23: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.612s" x="519.5" y="50" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-05-24: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.657s" x="519.5" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-25: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.702s" x="519.5" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-26: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.747s" x="519.5" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-27: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.792s" x="519.5" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-28: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.837s" x="519.5" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.882s" x="519.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-05-30: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.630s" x="533.25" y="50" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-05-31: 18 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.675s" x="533.25" y="63.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-01: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.720s" x="533.25" y="77.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-02: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.765s" x="533.25" y="91.25" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-03: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.810s" x="533.25" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-04: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.855s" x="533.25" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-05: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.900s" x="533.25" y="132.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-06: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.648s" x="547" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-07: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.693s" x="547" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-08: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.738s" x="547" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-09: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.783s" x="547" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-10: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.828s" x="547" y="105" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-11: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.873s" x="547" y="118.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-12: 2 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.918s" x="547" y="132.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-13: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.666s" x="560.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-14: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.711s" x="560.75" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-15: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.756s" x="560.75" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-16: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.801s" x="560.75" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-17: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.846s" x="560.75" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-18: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.891s" x="560.75" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-19: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.936s" x="560.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-20: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.684s" x="574.5" y="50" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-21: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.729s" x="574.5" y="63.75" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-06-22: 7 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.774s" x="574.5" y="77.5" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-06-23: 12 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.819s" x="574.5" y="91.25" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-24: 2 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.864s" x="574.5" y="105" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-25: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.909s" x="574.5" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-26: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.954s" x="574.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-27: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.702s" x="588.25" y="50" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-28: 2 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.747s" x="588.25" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-06-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.792s" x="588.25" y="77.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-06-30: 2 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.837s" x="588.25" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-01: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.882s" x="588.25" y="105" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-07-02: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.927s" x="588.25" y="118.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-07-03: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.972s" x="588.25" y="132.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-07-04: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.720s" x="602" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-05: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.765s" x="602" y="63.75" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-07-06: 6 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.810s" x="602" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-07: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.855s" x="602" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-08: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.900s" x="602" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-09: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.945s" x="602" y="118.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-07-10: 5 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.990s" x="602" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-11: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.738s" x="615.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-12: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.783s" x="615.75" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-13: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.828s" x="615.75" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-14: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.873s" x="615.75" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-15: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.918s" x="615.75" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-16: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.963s" x="615.75" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-17: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.008s" x="615.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-18: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.756s" x="629.5" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-19: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.801s" x="629.5" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-20: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.846s" x="629.5" y="77.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-07-21: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.891s" x="629.5" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-22: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.936s" x="629.5" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-23: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.981s" x="629.5" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-24: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.026s" x="629.5" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-25: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.774s" x="643.25" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-26: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.819s" x="643.25" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-27: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.864s" x="643.25" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-28: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.909s" x="643.25" y="91.25" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.954s" x="643.25" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-07-30: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.999s" x="643.25" y="118.75" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-07-31: 9 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.044s" x="643.25" y="132.5" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-08-01: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.792s" x="657" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-08-02: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.837s" x="657" y="63.75" width="11" height="11" rx="2.5" fill="#69f0a0"><title>2026-08-03: 57 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.882s" x="657" y="77.5" width="11" height="11" rx="2.5" fill="#39d353"><title>2026-08-04: 41 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.927s" x="657" y="91.25" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-08-05: 5 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.972s" x="657" y="105" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-08-06: 5 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.017s" x="657" y="118.75" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-08-07: 10 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.062s" x="657" y="132.5" width="11" height="11" rx="2.5" fill="#39d353"><title>2026-08-08: 31 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.810s" x="670.75" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-08-09: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.855s" x="670.75" y="63.75" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-08-10: 26 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.900s" x="670.75" y="77.5" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-08-11: 6 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.945s" x="670.75" y="91.25" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-08-12: 17 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.990s" x="670.75" y="105" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-08-13: 23 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.035s" x="670.75" y="118.75" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-08-14: 25 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.080s" x="670.75" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-08-15: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.828s" x="684.5" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-08-16: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.873s" x="684.5" y="63.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-08-17: 3 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.918s" x="684.5" y="77.5" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-08-18: 10 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.963s" x="684.5" y="91.25" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-08-19: 28 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.008s" x="684.5" y="105" width="11" height="11" rx="2.5" fill="#69f0a0"><title>2026-08-20: 73 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.053s" x="684.5" y="118.75" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-08-21: 10 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.098s" x="684.5" y="132.5" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-08-22: 10 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.846s" x="698.25" y="50" width="11" height="11" rx="2.5" fill="#39d353"><title>2026-08-23: 37 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.891s" x="698.25" y="63.75" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-08-24: 19 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.936s" x="698.25" y="77.5" width="11" height="11" rx="2.5" fill="#39d353"><title>2026-08-25: 40 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.981s" x="698.25" y="91.25" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-08-26: 16 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.026s" x="698.25" y="105" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-08-27: 6 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.071s" x="698.25" y="118.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-08-28: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.116s" x="698.25" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-08-29: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.864s" x="712" y="50" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-08-30: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.909s" x="712" y="63.75" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-08-31: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.954s" x="712" y="77.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-09-01: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.999s" x="712" y="91.25" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-09-02: 1 contribution</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.044s" x="712" y="105" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-09-03: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.089s" x="712" y="118.75" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-09-04: 12 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.134s" x="712" y="132.5" width="11" height="11" rx="2.5" fill="#161b22"><title>2026-09-05: 0 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.882s" x="725.75" y="50" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-06: 17 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.927s" x="725.75" y="63.75" width="11" height="11" rx="2.5" fill="#39d353"><title>2026-09-07: 32 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.972s" x="725.75" y="77.5" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-09-08: 6 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.017s" x="725.75" y="91.25" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-09-09: 15 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.062s" x="725.75" y="105" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-09-10: 8 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.107s" x="725.75" y="118.75" width="11" height="11" rx="2.5" fill="#0e4429"><title>2026-09-11: 4 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.152s" x="725.75" y="132.5" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-12: 18 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.900s" x="739.5" y="50" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-13: 26 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.945s" x="739.5" y="63.75" width="11" height="11" rx="2.5" fill="#39d353"><title>2026-09-14: 39 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.990s" x="739.5" y="77.5" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-15: 16 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.035s" x="739.5" y="91.25" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-16: 17 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.080s" x="739.5" y="105" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-17: 18 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.125s" x="739.5" y="118.75" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-18: 30 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.170s" x="739.5" y="132.5" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-19: 16 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.918s" x="753.25" y="50" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-09-20: 12 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.963s" x="753.25" y="63.75" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-21: 19 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.008s" x="753.25" y="77.5" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-09-22: 15 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.053s" x="753.25" y="91.25" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-09-23: 10 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.098s" x="753.25" y="105" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-24: 19 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.143s" x="753.25" y="118.75" width="11" height="11" rx="2.5" fill="#39d353"><title>2026-09-25: 35 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:1.188s" x="753.25" y="132.5" width="11" height="11" rx="2.5" fill="#26a641"><title>2026-09-26: 23 contributions</title></rect>
+<rect class="c-widget_fote_heatmap" style="animation-delay:0.936s" x="767" y="50" width="11" height="11" rx="2.5" fill="#006d32"><title>2026-09-27: 9 contributions</title></rect>
+<text x="658.25" y="161.1" fill="#7d8590" font-size="10" text-anchor="end">Less</text>
+<rect x="664.25" y="152.25" width="11" height="11" rx="2.2" fill="#161b22"/>
+<rect x="678" y="152.25" width="11" height="11" rx="2.2" fill="#0e4429"/>
+<rect x="691.75" y="152.25" width="11" height="11" rx="2.2" fill="#006d32"/>
+<rect x="705.5" y="152.25" width="11" height="11" rx="2.2" fill="#26a641"/>
+<rect x="719.25" y="152.25" width="11" height="11" rx="2.2" fill="#39d353"/>
+<rect x="733" y="152.25" width="11" height="11" rx="2.2" fill="#69f0a0"/>
+<text x="778" y="161.1" fill="#7d8590" font-size="10" text-anchor="end">More</text>
+<line x1="0" y1="177.25" x2="800" y2="177.25" stroke="#1E293B" stroke-opacity="0.25"/>
+<text x="22" y="201.25" font-size="13" fill="#39d353"><tspan font-weight="700">1,568</tspan><tspan fill="#7d8590"> contributions in the last year</tspan></text>
+<text x="778" y="201.25" font-size="12" fill="#7d8590" text-anchor="end">Sep 28, 2025 &#8594; Sep 27, 2026</text>
+<text x="22" y="225.25" font-size="13" fill="#7d8590">current streak <tspan fill="#22D3EE" font-weight="700">22 days</tspan><tspan fill="#7d8590">   &#183;   longest </tspan><tspan fill="#22D3EE" font-weight="700">22 days</tspan></text>
+<text x="778" y="225.25" font-size="12" fill="#7d8590" text-anchor="end">best day <tspan fill="#f2cc60" font-weight="700">73</tspan> on Aug 20, 2026</text>
+</svg>
+  
+    </g>
+  
 </svg>
