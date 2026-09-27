@@ -34,7 +34,7 @@
 
 I am a **Full-Stack AI Engineer** specializing in bridging the gap between Large Language Models (LLMs) and production-grade, scalable software products. My focus lies in designing robust backend pipelines, multi-platform applications, and responsive, interactive user experiences.
 
-- 🧠 **AI & LLM Systems:** Production RAG pipelines, Vector Search indexing, Model Context Protocol (MCP), and Agentic tool workflows.
+- 🧠 **AI & LLM Systems:** Production RAG pipelines, Vector Search indexing, Model Context Protocol (MCP), and Agentic tool workflows. Selected runtime/security hardening for OSS agent infrastructure (see Contributions below).
 - ⚡ **Full-Stack Engineering:** High-performance web apps with **Next.js (App Router)**, **TypeScript**, **Python**, and **Supabase/PostgreSQL**.
 - 📱 **Multi-Platform Ecosystems:** Seamless cross-platform experiences across Web, Desktop (Electron), and Mobile.
 - 🎯 **Currently Building:** [**Masar X**](https://github.com/fotedev) — an AI-powered study and knowledge orchestration ecosystem.
@@ -49,6 +49,17 @@ I am a **Full-Stack AI Engineer** specializing in bridging the gap between Large
 | **[Interactive SaaS & UI Platform](https://github.com/fotedev)** | `React` `Next.js` `TypeScript` `Framer Motion` `WebSockets` | High-performance interactive platform with 15+ Framer Motion mechanics, real-time WebSocket messaging, dual-theme engine, and role-based admin panel. | ✨ Live |
 | **[AI Pipelines & Agentic Tooling](https://github.com/fotedev)** | `Python` `TypeScript` `MCP` `LangChain` `LLM Evals` | Production-ready AI agent pipelines integrating Model Context Protocol (MCP), automated LLM evaluation workflows, and optimized prompt pipelines. | 🛠️ Maintained |
 | **[Developer Portfolio](https://github.com/fotedev)** | `Next.js` `Tailwind CSS` `TypeScript` `Vercel` | Modern, responsive developer portfolio engineered for speed, clean UX architecture, and dynamic content delivery. | 🌐 Deployed |
+
+---
+
+### 🛠️ AI Infrastructure & Open Source
+
+- **[NousResearch / hermes-agent](https://github.com/NousResearch/hermes-agent)** — Credited Contributor
+  - [#109834](https://github.com/NousResearch/hermes-agent/pull/109834) — `fix(cli): honour key_env/api_key in config.yaml model.aliases entries` *(salvaged into [Teknium's #114809](https://github.com/NousResearch/hermes-agent/pull/114809) on `main`; authorship preserved by cherry-pick)*
+  - [#106626](https://github.com/NousResearch/hermes-agent/pull/106626) — `fix(gateway): prefer session model override in /usage billing route` *(open)*
+  - [#122144](https://github.com/NousResearch/hermes-agent/pull/122144) — `fix(windows): respawn gateway on the venv interpreter when captured argv leads with the base interpreter` *(open)*
+- **[MiniMax-AI / minimax-code](https://github.com/MiniMax-AI/minimax-code)** — Responsible Disclosure
+  - [#141](https://github.com/MiniMax-AI/minimax-code/issues/141) — Insecure plaintext storage of Telegram bot tokens and Windows NTFS permission fallbacks in `@mavis/local-runtime` *(acknowledged by vendor; independently audited by the community)*
 
 ---
 
