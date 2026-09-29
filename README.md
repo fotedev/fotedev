@@ -1,16 +1,16 @@
 <div align="center">
 
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="dark.svg?v=gitascii10">
-    <source media="(prefers-color-scheme: light)" srcset="light.svg?v=gitascii10">
-    <img alt="FOTE's GitHub Banner" src="dark.svg?v=gitascii10" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="dark.svg?v=gitascii11">
+    <source media="(prefers-color-scheme: light)" srcset="light.svg?v=gitascii11">
+    <img alt="FOTE's GitHub Banner" src="dark.svg?v=gitascii11" width="100%">
   </picture>
 
   <br/><br/>
 
   <!-- Dynamic Typing Title -->
   <a href="https://github.com/fotedev">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1200&color=22D3EE&center=true&vCenter=true&width=650&lines=Full-Stack+AI+Engineer;Building+Scalable+GenAI+%26+RAG+Systems;TypeScript+%7C+Next.js+%7C+Python+%7C+Supabase;Architecting+Multi-Platform+Applications" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=4000&color=22D3EE&center=true&vCenter=true&width=800&lines=Full-Stack+AI+Engineer;Building+Scalable+GenAI+%26+RAG+Systems;TypeScript+%7C+Next.js+%7C+Python+%7C+Supabase;Architecting+Multi-Platform+Applications" alt="Typing SVG" />
   </a>
 
   <br/>
