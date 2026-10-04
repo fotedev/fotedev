@@ -37,3 +37,4 @@ _tools/
 # SVGs not currently used in the README (kept locally for future use)
 drizzle-orm.svg
 /context_output
+no-footer-preview.png
