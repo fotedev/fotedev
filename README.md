@@ -10,7 +10,7 @@
 
   <!-- Dynamic Typing Title -->
   <a href="https://github.com/fotedev">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=4000&color=22D3EE&center=true&vCenter=true&width=800&lines=Full-Stack+AI+Engineer;Building+Scalable+GenAI+%26+RAG+Systems;TypeScript+%7C+Next.js+%7C+Python+%7C+Supabase;Architecting+Multi-Platform+Applications" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=4000&color=22D3EE&center=true&vCenter=true&width=800&lines=Full-Stack+AI+Engineer;Building+Scalable+GenAI+%26+RAG+Systems;TypeScript+%7C+Next.js+%7C+Python+%7C+Supabase;Architecting+Multi-Platform+Applications" alt="Typing SVG" />
   </a>
 
   <br/>
@@ -37,7 +37,7 @@ I am a **Full-Stack AI Engineer** specializing in bridging the gap between Large
 - 🧠 **AI & LLM Systems:** Production RAG pipelines, Vector Search indexing, Model Context Protocol (MCP), and Agentic tool workflows. Selected runtime/security hardening for OSS agent infrastructure (see Contributions below).
 - ⚡ **Full-Stack Engineering:** High-performance web apps with **Next.js (App Router)**, **TypeScript**, **Python**, and **Supabase/PostgreSQL**.
 - 📱 **Multi-Platform Ecosystems:** Seamless cross-platform experiences across Web, Desktop (Electron), and Mobile.
-- 🎯 **Currently Building:** [**Masar X**](https://github.com/fotedev) — an AI-powered study and knowledge orchestration ecosystem.
+- 🎯 **Currently Building:** [**Masar X**](https://github.com/fotedev/Masar-x-next) — an AI-powered study and knowledge orchestration ecosystem.
 
 ---
 
@@ -45,10 +45,10 @@ I am a **Full-Stack AI Engineer** specializing in bridging the gap between Large
 
 | Project | Tech Highlights | Key Engineering Achievements | Status |
 | :--- | :--- | :--- | :---: |
-| **[Masar X](https://github.com/fotedev)** | `Next.js` `Supabase` `pgvector` `Electron` `RAG` | Multi-platform study ecosystem featuring semantic PDF search, vector document indexing, and sub-second latency streaming responses. | 🚀 Active |
+| **[Masar X](https://github.com/fotedev/Masar-x-next)** | `Next.js` `Supabase` `pgvector` `Electron` `RAG` | Multi-platform study ecosystem featuring semantic PDF search, vector document indexing, and sub-second latency streaming responses. | 🚀 Active |
 | **[Interactive SaaS & UI Platform](https://github.com/fotedev)** | `React` `Next.js` `TypeScript` `Framer Motion` `WebSockets` | High-performance interactive platform with 15+ Framer Motion mechanics, real-time WebSocket messaging, dual-theme engine, and role-based admin panel. | ✨ Live |
 | **[AI Pipelines & Agentic Tooling](https://github.com/fotedev)** | `Python` `TypeScript` `MCP` `LangChain` `LLM Evals` | Production-ready AI agent pipelines integrating Model Context Protocol (MCP), automated LLM evaluation workflows, and optimized prompt pipelines. | 🛠️ Maintained |
-| **[Developer Portfolio](https://github.com/fotedev)** | `Next.js` `Tailwind CSS` `TypeScript` `Vercel` | Modern, responsive developer portfolio engineered for speed, clean UX architecture, and dynamic content delivery. | 🌐 Deployed |
+| **[Developer Portfolio](https://github.com/fotedev/My_portfolio)** | `Next.js` `Tailwind CSS` `TypeScript` `Vercel` | Modern, responsive developer portfolio engineered for speed, clean UX architecture, and dynamic content delivery. | 🌐 Deployed |
 
 ---
 
@@ -73,9 +73,9 @@ I am a **Full-Stack AI Engineer** specializing in bridging the gap between Large
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/RAG_Pipelines-000000?style=flat-square&logo=openai&logoColor=white" />
-  <img src="https://img.shields.io/badge/Model_Context_Protocol_(MCP)-22D3EE?style=flat-square&logoColor=black" />
+  <img src="https://img.shields.io/badge/Model_Context_Protocol_(MCP)-22D3EE?style=flat-square" />
   <img src="https://img.shields.io/badge/Vector_Search_(pgvector)-336791?style=flat-square&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/LLM_Orchestration-10B981?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/LLM_Orchestration-10B981?style=flat-square" />
 </p>
 
 #### 💻 Frontend & UX Engineering
@@ -103,7 +103,7 @@ I am a **Full-Stack AI Engineer** specializing in bridging the gap between Large
 
   <!-- GitHub Stats & Streak -->
   <a href="https://github.com/fotedev">
-    <img src="https://github-readme-stats-fast.vercel.app/api?username=fotedev&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&title_color=22D3EE&text_color=94A3B8&icon_color=3B82F6&bg_color=0A0E1A" height="165" alt="FOTE's GitHub Stats" />
+    <img src="https://github-readme-stats.vercel.app/api?username=fotedev&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&title_color=22D3EE&text_color=94A3B8&icon_color=3B82F6&bg_color=0A0E1A" height="165" alt="FOTE's GitHub Stats" />
   </a>
   <a href="https://github.com/fotedev">
     <img src="https://streak-stats.demolab.com/?user=fotedev&theme=tokyonight&hide_border=true&stroke=22D3EE&background=0A0E1A&ring=3B82F6&fire=22D3EE&currStreakLabel=22D3EE" height="165" alt="GitHub Streak" />
@@ -113,7 +113,7 @@ I am a **Full-Stack AI Engineer** specializing in bridging the gap between Large
 
   <!-- Top Languages -->
   <a href="https://github.com/fotedev">
-    <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=fotedev&layout=compact&theme=tokyonight&hide_border=true&title_color=22D3EE&text_color=94A3B8&bg_color=0A0E1A" height="140" alt="Top Languages" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fotedev&layout=compact&theme=tokyonight&hide_border=true&title_color=22D3EE&text_color=94A3B8&bg_color=0A0E1A" height="140" alt="Top Languages" />
   </a>
 
 </div>
