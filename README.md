@@ -1,9 +1,9 @@
 <div align="center">
 
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="dark.svg?v=gitascii11">
-    <source media="(prefers-color-scheme: light)" srcset="light.svg?v=gitascii11">
-    <img alt="FOTE's GitHub Banner" src="dark.svg?v=gitascii11" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="dark.svg?v=stats-2026-11">
+    <source media="(prefers-color-scheme: light)" srcset="light.svg?v=stats-2026-11">
+    <img alt="FOTE's GitHub Banner" src="dark.svg?v=stats-2026-11" width="100%">
   </picture>
 
   <br/><br/>
