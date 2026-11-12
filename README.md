@@ -43,10 +43,10 @@ I build **AI-powered full-stack products** and contribute to upstream open sourc
 
 ### My GitHub Activity
 
-[Created PRs](https://github.com/pulls?q=is%3Apr+author%3Afotedev+-user%3Afotedev) ·
-[Merged PRs](https://github.com/pulls?q=is%3Apr+author%3Afotedev+is%3Amerged+) ·
-[Reviewed PRs](https://github.com/pulls?q=is%3Apr+reviewed-by%3Afotedev+-user%3Afotedev) ·
-[All Involvements](https://github.com/pulls?q=involves%3Afotedev+-user%3Afotedev)
+[Created PRs](https://github.com/search?q=is%3Apr+author%3Afotedev+-user%3Afotedev&type=issues) ·
+[Merged PRs](https://github.com/search?q=is%3Apr+author%3Afotedev+is%3Amerged&type=issues) ·
+[Reviewed PRs](https://github.com/search?q=is%3Apr+reviewed-by%3Afotedev+-user%3Afotedev&type=issues) ·
+[All Involvements](https://github.com/search?q=involves%3Afotedev+-user%3Afotedev&type=issues)
 
 ---
 
