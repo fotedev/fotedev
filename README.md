@@ -12,12 +12,12 @@
 
 ### Who I Am
 
-I am a **Full-Stack Engineer** building production web applications with **Next.js (App Router)**, **TypeScript**, and **Supabase**, plus developer tooling used by the AI-IDE community.
+I build **AI-powered full-stack products** and contribute to upstream open source.
 
-- **Full-Stack Engineering:** Production web apps with **Next.js (App Router)**, **React**, **TypeScript**, **Node.js**, **Tailwind CSS**, and **Supabase/PostgreSQL**.
-- **Cross-Platform:** Web, Desktop (Electron), and Mobile.
+- **Building:** [**Masar X**](https://github.com/fotedev/Masar-x-next) — an AI-powered study platform for university students.
+- **Full-Stack:** Production web apps with **Next.js (App Router)**, **React**, **TypeScript**, **Node.js**, **Tailwind CSS**, and **Supabase/PostgreSQL**, plus developer tooling used by the AI-IDE community.
 - **Open Source & Security:** Credited contributor to [NousResearch / hermes-agent](https://github.com/NousResearch/hermes-agent) (one fix landed upstream via maintainer salvage, two more open) and responsible disclosure acknowledged by [MiniMax-AI / minimax-code](https://github.com/MiniMax-AI/minimax-code).
-- **Currently Building:** [**Masar X**](https://github.com/fotedev/Masar-x-next) — an AI-powered study platform for university students.
+- **Cross-Platform:** Web, Desktop (Electron), and Mobile.
 
 ---
 
@@ -41,6 +41,15 @@ I am a **Full-Stack Engineer** building production web applications with **Next.
 
 ---
 
+### My GitHub Activity
+
+[Created PRs](https://github.com/search?q=is%3Apr+author%3Afotedev+-user%3Afotedev&type=issues) ·
+[Merged PRs](https://github.com/search?q=is%3Apr+author%3Afotedev+is%3Amerged&type=issues) ·
+[Reviewed PRs](https://github.com/search?q=is%3Apr+reviewed-by%3Afotedev+-user%3Afotedev&type=issues) ·
+[All Involvements](https://github.com/search?q=involves%3Afotedev+-user%3Afotedev&type=issues)
+
+---
+
 ### Tech Stack
 
 - **Languages:** TypeScript, JavaScript, HTML/CSS, SQL, PowerShell
@@ -55,7 +64,7 @@ I am a **Full-Stack Engineer** building production web applications with **Next.
 ### Connect
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/fotedev"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/fote"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://x.com/FoteTeam"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
   <a href="mailto:fote.siengineer@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://www.youtube.com/channel/UCmfp_B-hOFq4UW5g1T4LCvQ"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" /></a>
