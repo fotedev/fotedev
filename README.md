@@ -1,9 +1,9 @@
 <div align="center">
 
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="dark.svg?v=stats-2026-11">
-    <source media="(prefers-color-scheme: light)" srcset="light.svg?v=stats-2026-11">
-    <img alt="Ahmed Aboalayoun (fotedev) — AI Product & Full-Stack Engineer" src="dark.svg?v=stats-2026-11" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="dark.svg?v=art-2026-11">
+    <source media="(prefers-color-scheme: light)" srcset="light.svg?v=art-2026-11">
+    <img alt="Ahmed Aboalayoun (fotedev) — AI Product & Full-Stack Engineer" src="dark.svg?v=art-2026-11" width="100%">
   </picture>
 
 </div>

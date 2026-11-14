@@ -177,7 +177,7 @@
 
       
       
-      <rect class="" x="0" y="0" width="664" height="288" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1" rx="8" />
+      <rect class="" x="0" y="0" width="664" height="150" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1" rx="8" />
       
       <text x="12" y="20" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', 'JetBrains Mono', monospace" xml:space="preserve" font-size="14"><tspan fill="#3d444d">─</tspan><tspan fill="#0969da"> fotedev@github </tspan><tspan fill="#3d444d">───────────────────────────────────────────────────────────</tspan></text>
 <text x="12" y="38" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', 'JetBrains Mono', monospace" xml:space="preserve" font-size="14"><tspan fill="#bc4c00">. Uptime: </tspan><tspan fill="#8c959f">.......................................</tspan><tspan fill="#1f2328"> 2 years, 3 months, 12 days</tspan></text>
@@ -186,9 +186,6 @@
 <text x="12" y="92" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', 'JetBrains Mono', monospace" xml:space="preserve" font-size="14"><tspan fill="#bc4c00">. Languages: </tspan><tspan fill="#8c959f">...............</tspan><tspan fill="#1f2328"> TypeScript, PowerShell, CSS, Python, JavaScript</tspan></text>
 <text x="12" y="118" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', 'JetBrains Mono', monospace" xml:space="preserve" font-size="14"><tspan fill="#3d444d">─</tspan><tspan fill="#0969da"> Contact </tspan><tspan fill="#3d444d">──────────────────────────────────────────────────────────────────</tspan></text>
 <text x="12" y="136" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', 'JetBrains Mono', monospace" xml:space="preserve" font-size="14"><tspan fill="#bc4c00">. GitHub: </tspan><tspan fill="#8c959f">...............................................</tspan><tspan fill="#1f2328"> github.com/fotedev</tspan></text>
-<text x="12" y="162" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', 'JetBrains Mono', monospace" xml:space="preserve" font-size="14"><tspan fill="#3d444d">─</tspan><tspan fill="#0969da"> GitHub Stats </tspan><tspan fill="#3d444d">─────────────────────────────────────────────────────────────</tspan></text>
-<text x="12" y="180" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', 'JetBrains Mono', monospace" xml:space="preserve" font-size="14"><tspan fill="#bc4c00">. Repos: </tspan><tspan fill="#8c959f">........................</tspan><tspan fill="#0550ae"> 21</tspan><tspan fill="#3d444d"> | </tspan><tspan fill="#bc4c00">. Stars: </tspan><tspan fill="#8c959f">........................</tspan><tspan fill="#0550ae"> 71</tspan></text>
-<text x="12" y="198" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', 'JetBrains Mono', monospace" xml:space="preserve" font-size="14"><tspan fill="#bc4c00">. Commits: </tspan><tspan fill="#8c959f">.....................</tspan><tspan fill="#0550ae"> 855</tspan><tspan fill="#3d444d"> | </tspan><tspan fill="#bc4c00">. Followers: </tspan><tspan fill="#8c959f">....................</tspan><tspan fill="#0550ae"> 32</tspan></text>
   
     </g>
   
