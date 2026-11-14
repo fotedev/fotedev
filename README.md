@@ -15,10 +15,6 @@
 I build **AI-powered full-stack products** and contribute to upstream open source.
 
 ```text
-location    ->  Asyut, Egypt
-role        ->  AI Product & Full-Stack Engineer
-education   ->  CS & AI — Assiut National University
-stack       ->  TypeScript · Next.js (App Router) · React · Node.js · Tailwind · Supabase
 focus       ->  RAG architectures · MCP · production AI systems
 oss         ->  merged in JetBrains/swot & hermes-agent · 25+ upstream PRs
 building    ->  Masar X — bilingual AI study platform (web · Electron · mobile)
