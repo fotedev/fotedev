@@ -20,6 +20,16 @@ I build **AI-powered full-stack products** and contribute to upstream open sourc
 - **Cross-Platform:** Web, Desktop (Electron), and Mobile.
 - **Credentials:** One Million Prompters certificate (Dubai Future Foundation / Dubai Centre for AI) · [fotedev.me](https://fotedev.me)
 
+```text
+location   ->  Asyut, Egypt
+role       ->  AI Product & Full-Stack Engineer
+education  ->  CS & AI — Assiut National University
+stack      ->  TypeScript · Next.js · Node.js · Supabase · Python
+focus      ->  RAG architectures · MCP · production AI systems
+oss        ->  merged in JetBrains/swot & hermes-agent · 25+ upstream PRs
+building   ->  Masar X — bilingual AI study platform
+```
+
 ---
 
 ### Featured Projects
