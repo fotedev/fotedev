@@ -14,20 +14,15 @@
 
 I build **AI-powered full-stack products** and contribute to upstream open source.
 
-- **Building:** [**Masar X**](https://github.com/fotedev/Masar-x-next) — an AI-powered study platform for university students.
-- **Full-Stack:** Production web apps with **Next.js (App Router)**, **React**, **TypeScript**, **Node.js**, **Tailwind CSS**, and **Supabase/PostgreSQL**, plus developer tooling used by the AI-IDE community.
-- **Open Source & Security:** Merged code in [JetBrains / swot](https://github.com/JetBrains/swot) and [NousResearch / hermes-agent](https://github.com/NousResearch/hermes-agent), 7 merged entries in the [dev-resources](https://github.com/marcelscruz/dev-resources) tools list, detection-rule PRs for the Trojan.PavinLoader malware campaign, and responsible disclosure acknowledged by [MiniMax-AI / minimax-code](https://github.com/MiniMax-AI/minimax-code).
-- **Cross-Platform:** Web, Desktop (Electron), and Mobile.
-- **Credentials:** One Million Prompters certificate (Dubai Future Foundation / Dubai Centre for AI) · [fotedev.me](https://fotedev.me)
-
 ```text
-location   ->  Asyut, Egypt
-role       ->  AI Product & Full-Stack Engineer
-education  ->  CS & AI — Assiut National University
-stack      ->  TypeScript · Next.js · Node.js · Supabase · Python
-focus      ->  RAG architectures · MCP · production AI systems
-oss        ->  merged in JetBrains/swot & hermes-agent · 25+ upstream PRs
-building   ->  Masar X — bilingual AI study platform
+location    ->  Asyut, Egypt
+role        ->  AI Product & Full-Stack Engineer
+education   ->  CS & AI — Assiut National University
+stack       ->  TypeScript · Next.js (App Router) · React · Node.js · Tailwind · Supabase
+focus       ->  RAG architectures · MCP · production AI systems
+oss         ->  merged in JetBrains/swot & hermes-agent · 25+ upstream PRs
+building    ->  Masar X — bilingual AI study platform (web · Electron · mobile)
+credentials ->  One Million Prompters (Dubai Future Foundation) · fotedev.me
 ```
 
 ---
