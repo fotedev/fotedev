@@ -1,20 +1,14 @@
 <div align="center">
 
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="dark.svg?v=art-2026-11">
-    <source media="(prefers-color-scheme: light)" srcset="light.svg?v=art-2026-11">
-    <img alt="Ahmed Aboalayoun (fotedev) — AI Product & Full-Stack Engineer" src="dark.svg?v=art-2026-11" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="dark.svg?v=art-2026-11b">
+    <source media="(prefers-color-scheme: light)" srcset="light.svg?v=art-2026-11b">
+    <img alt="Ahmed Aboalayoun (fotedev) — AI Product & Full-Stack Engineer" src="dark.svg?v=art-2026-11b" width="100%">
   </picture>
 
 </div>
 
-Currently building [**Masar X**](https://github.com/fotedev/Masar-x-next) — a bilingual AI study platform for university students (Next.js, Supabase, Electron, Expo).
-
-### Selected Work
-
-- [**Masar X**](https://github.com/fotedev/Masar-x-next) — RAG document search + streaming study assistance, web / desktop / mobile
-- [**ghost**](https://github.com/fotedev/ghost) — identity-reset toolkit for AI IDEs (Cursor, Windsurf, Trae, ZCode…) · 28★
-- [**context**](https://github.com/fotedev/context) — LLM-ready context capture + LMArena comparison harness (CLI / GUI / TUI / extension) · 18★
+Currently building [**Masar X**](https://github.com/fotedev/Masar-x-next) — a bilingual AI study platform for university students, with AI-powered document search and streaming study assistance (Next.js, Supabase, Electron, Expo).
 
 ### Open Source & Security
 
@@ -23,7 +17,10 @@ Currently building [**Masar X**](https://github.com/fotedev/Masar-x-next) — a 
   - [#122144](https://github.com/NousResearch/hermes-agent/pull/122144) — `fix(windows): respawn gateway on the venv interpreter when captured argv leads with the base interpreter` *(open)*
 - **[MiniMax-AI / minimax-code](https://github.com/MiniMax-AI/minimax-code)** — Responsible Disclosure
   - [#141](https://github.com/MiniMax-AI/minimax-code/issues/141) — Insecure plaintext storage of Telegram bot tokens and Windows NTFS permission fallbacks in `@mavis/local-runtime` *(acknowledged by vendor; independently audited by the community)*
-- **Also:** merged code in [JetBrains/swot](https://github.com/JetBrains/swot) ([#41592](https://github.com/JetBrains/swot/pull/41592)) · 8 merged entries in [marcelscruz/dev-resources](https://github.com/marcelscruz/dev-resources) · YARA/Sigma detection rules for the [PavinLoader](https://github.com/fotedev/pavinloader-easeus-campaign) fake-crack malware campaign · One Million Prompters certified — Dubai Future Foundation
+- **[JetBrains / swot](https://github.com/JetBrains/swot)** — merged code ([#41592](https://github.com/JetBrains/swot/pull/41592))
+- **[marcelscruz / dev-resources](https://github.com/marcelscruz/dev-resources)** — 8 merged tool entries
+- **[PavinLoader campaign](https://github.com/fotedev/pavinloader-easeus-campaign)** — YARA/Sigma detection rules for the fake-crack malware campaign
+- **One Million Prompters** certified — Dubai Future Foundation
 
 ### Tech Stack
 
@@ -43,14 +40,4 @@ Currently building [**Masar X**](https://github.com/fotedev/Masar-x-next) — a 
   <a href="https://github.com/fotedev">
     <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=fotedev&layout=compact&theme=tokyonight&hide_border=true&title_color=22D3EE&text_color=94A3B8&bg_color=0A0E1A" height="165" alt="Top Languages" />
   </a>
-</p>
-
-<p align="center">
-  <samp>
-    <a href="https://fotedev.me">website</a> ·
-    <a href="https://www.linkedin.com/in/fote">linkedin</a> ·
-    <a href="https://x.com/FoteTeam">x</a> ·
-    <a href="mailto:fote.siengineer@gmail.com">email</a> ·
-    <a href="https://www.youtube.com/channel/UCmfp_B-hOFq4UW5g1T4LCvQ">youtube</a>
-  </samp>
 </p>
